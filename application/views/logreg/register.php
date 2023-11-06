@@ -6,26 +6,46 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
+  <?php
+    $pesan=$this->session->flashdata('pesan');
+		  if ($pesan=="")
+		  {
+			  echo "";	
+		  }
+	  	else
+		  {
+	    ?>
+         <div class="alert alert-danger alert-dismissible">
+               <?php echo $pesan; ?>                        
+      	 </div>
+    <?php
+		}
+	  ?>
   <body>
     <div class="container vh-100">
       <div class="row h-100 d-flex justify-content-center align-items-center " id="container">
         <div class="col-lg-7 col-md-8 col-sm-10 border-dark rounded-3 shadow-lg">
           <h2 class="text-center py-3 ">Form Register</h2>
-		  <form method="post" action="<?php echo base_url('')?>">
+		  <form method="post" action="<?php echo base_url('Cdaftaruser/simpan_daftar')?>">
             <div class="mx-3 my-4">
               <label class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control mb-2" required placeholder="Masukan Nama lengkap" name="nama_lengkap">
+              <input type="text" class="form-control mb-2" required placeholder="Masukan Nama lengkap" name="nama_user">
               <label class="form-label">No. WhatsApp</label>
-              <input type="text" class="form-control mb-2" placeholder="12356789" name="no_telp"> 
+              <input type="text" class="form-control mb-2" placeholder="12356789" name="nomor_whatsapp"> 
               <label class="form-label">Email</label>
-              <input type="email" class="form-control mb-2" placeholder="example@yahoo.com" name="email">
+              <input type="email" class="form-control mb-2" placeholder="example@yahoo.com" name="alamat_email">
               <label class="form-label">Password</label>
-              <input type="password" class="form-control mb-2" placeholder="Pochinki" name="password"> 
+              <input type="password" class="form-control mb-2" placeholder="*********" name="password"> 
+              <label class="form-label">Daftar Sebagai</label>
+              <select name="level" id="" class="w-100 rounded-2" style="height: 37px;">
+                <option value="" disabled selected>-- Pilih Role --</option>
+                <option value="penyewa">Penyewa Kos</option>
+                <option value="pemilik">Pemilik Kos</option>
+              </select>
               <!-- bagian button -->
               <div class="pt-3 d-flex align-items-center justify-content-between">
-				  <a class="btn btn-info" href="<?php echo base_url(''); ?>">Back</a>
+				      <a class="btn btn-info" href="<?php echo base_url('Ctampilan/login'); ?>">Back</a>
                 <input type="submit" value="Sign Up" class="btn btn-success" id="signup">
-
               </div>
               <!-- term & Privacy -->
               <label class="pt-5" id="tp">
