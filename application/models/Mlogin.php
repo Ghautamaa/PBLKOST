@@ -12,7 +12,7 @@
             $sql = "select * from tbuser where alamat_email = '".$alamat_email."'"; 
             $sql.="and password ='".$password."'";
             $querry= $this->db->query($sql);
-            if($querry->num_rows()> 0){
+            if($querry->num_rows()> 0){ 
                 $data=$querry->row();
                 $array=array(
                     'id_user'=>$data->id_user,
