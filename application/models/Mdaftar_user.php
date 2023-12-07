@@ -20,7 +20,7 @@
 			);
 
             $this->db->insert('tbuser',$data);
-            $this->session->set_flashdata('pesan','Data Berhasil Disimpan');
+            $this->session->set_flashdata('pesan','Data Berhasil Disimpan...');
             redirect('Ctampilan/register','self');
         }
     }

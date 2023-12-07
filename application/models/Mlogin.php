@@ -20,11 +20,19 @@
                     'level'=> $data->level
                 );
                 $this->session->set_userdata($array);
-                return redirect('Ctampilan/dashboard');
+
+                if($data){
+                    $this->session->set_userdata($array);
+                    return redirect('Ctampilan/dashboard');
+                }
             } else {
                 $this->session->set_flashdata('pesan','Login Gagal!');
                 redirect('Ctampilan/login','refresh');
             }
+        }
+
+        function logout() {
+            $this->session->unset_userdata('');
         }
     }
 ?>

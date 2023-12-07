@@ -4,29 +4,48 @@
     <title>Halaman Pendaftaran</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url('style.php')?>">
+
+    <style>
+          .bg{
+            background-image:url(<?php echo base_url('')?>/img/Login2.png);
+            background-size:cover;
+            background-repeat: no-repeat;
+          }
+          
+          
+      </style>
   </head>
-  <?php
-    $pesan=$this->session->flashdata('pesan');
-		  if ($pesan=="")
-		  {
-			  echo "";	
-		  }
-	  	else
-		  {
-	    ?>
-         <div class="alert alert-danger alert-dismissible">
-               <?php echo $pesan; ?>                        
-      	 </div>
-    <?php
-		}
-	  ?>
   <body>
-    <div class="container vh-100">
-      <div class="row h-100 d-flex justify-content-center align-items-center " id="container">
-        <div class="col-lg-7 col-md-8 col-sm-10 border-dark rounded-3 shadow-lg">
+    <div class="bg">
+    <div class="container-fluid">
+      <div class="row h-100">
+      <div class="col-6   d-flex align-items-center justify-content-start">
+      <div class="hero text-light mx-5">
+              <h1 >KostFinder</h1>
+              <h2 >cari tempat terbaik kalian</h2>
+            </div>
+      </div>
+
+      <div class="row h-100 col-6 d-flex justify-content-center align-items-center " id="container">
+        <div class="col-lg-7 col-md-8 col-sm-10 border-dark ">
           <h2 class="text-center py-3 ">Form Register</h2>
 		  <form method="post" action="<?php echo base_url('Cdaftaruser/simpan_daftar')?>">
+              <?php
+              $pesan=$this->session->flashdata('pesan');
+              if ($pesan==" ")
+              {
+                echo " ";	
+              }
+              else
+              {
+            ?>
+                <div class="alert alert-success alert-dismissible">
+                      <?php echo $pesan; ?>                        
+                </div>
+              <?php
+            }
+            ?>
             <div class="mx-3 my-4">
               <label class="form-label">Nama Lengkap</label>
               <input type="text" class="form-control mb-2" required placeholder="Masukan Nama lengkap" name="nama_user">
@@ -56,6 +75,8 @@
           </form>
         </div>
       </div>
+    </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
