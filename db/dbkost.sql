@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Nov 2023 pada 03.13
+-- Waktu pembuatan: 11 Des 2023 pada 06.25
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -41,9 +41,7 @@ CREATE TABLE `tbuser` (
 --
 
 INSERT INTO `tbuser` (`id_user`, `nama_user`, `nomor_whatsapp`, `alamat_email`, `password`, `level`) VALUES
-(1, '1', '0895327714616', 'senjaghautama2004@gmail.com', '132', 'pemilik'),
-(2, '1', '1', 'senjaghautama2004@gmail.com', '1', 'penyewa'),
-(3, '1', '1', 'senjaghautama2004@gmail.com', '1', 'penyewa');
+(7, 'Gusti Ngurah Senja Ghautama', '0895327714616', 'senjaghautama2004@gmail.com', '123', 'pemilik');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +61,7 @@ ALTER TABLE `tbuser`
 -- AUTO_INCREMENT untuk tabel `tbuser`
 --
 ALTER TABLE `tbuser`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
