@@ -16,7 +16,10 @@
         function dashboard_pemilik() {
             $this->load->view('pemilik/dashboard');
         }
+        function daftar_kos() {
+            $this->load->view('pemilik/daftarKos');
         
     }
+}
 
 ?> 
