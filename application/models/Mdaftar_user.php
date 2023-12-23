@@ -26,10 +26,10 @@
                 );
 
                 $this->db->insert('tbuser',$data);
-                $this->session->set_flashdata('pesan','Data Berhasil Disimpan...');
+                $this->session->set_flashdata('pesan','Kami sudah mengirimkan email vefirikasi ke alamat email anda segera lakukan verifikasi agar bisa menggunakan fitur-fitur web...');
                 redirect('Ctampilan/register','self');
             } else {
-                $this->session->set_flashdata('pesan','Data Yang Dimasukan Sudah Ada..');
+                $this->session->set_flashdata('pesan','Data Diri Yang Dimasukan Sudah Ada..');
                 redirect('Ctampilan/register','self');
             }
 

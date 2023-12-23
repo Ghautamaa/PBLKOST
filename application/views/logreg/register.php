@@ -33,18 +33,17 @@
 		  <form method="post" action="<?php echo base_url('Cdaftaruser/simpan_daftar')?>">
               <?php
               $pesan=$this->session->flashdata('pesan');
-              if ($pesan==" ")
+              if (!empty($pesan))
               {
-                echo " ";	
-              }
-              else
-              {
-            ?>
-                <div class="alert alert-success alert-dismissible">
-                      <?php echo $pesan; ?>                        
+                ?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                 <?php
+                 echo ($pesan)
+                 ?>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               <?php
-            }
+              }
             ?>
             <div class="mx-3 my-4">
               <label class="form-label">Nama Lengkap</label>

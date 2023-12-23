@@ -10,8 +10,11 @@
             $this->load->view('logreg/register.php');
         }
 
-        function dashboard() {
-            $this->load->view('dashboard');
+        function dashboard_penyewa() {
+            $this->load->view('penyewa/dashboard');
+        }
+        function dashboard_pemilik() {
+            $this->load->view('pemilik/dashboard');
         }
         
     }

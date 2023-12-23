@@ -17,14 +17,18 @@
                 $array=array(
                     'id_user'=>$data->id_user,
                     'nama_user'=>$data->nama_user,
-                    'level'=> $data->level
+                    'level'=> $data->level,
+                    'is_logged_in' => true
                 );
-                $this->session->set_userdata($array);
-
-                if($data){
+                if($data->level == 'penyewa'){
                     $this->session->set_userdata($array);
-                    return redirect('Ctampilan/dashboard');
+                    return redirect('Ctampilan/dashboard_penyewa');
+                }elseif($data->level == 'pemilik'){
+                    $this->session->set_userdata($array);
+                    return redirect('Ctampilan/dashboard_pemilik');
                 }
+
+            
             } else {
                 $this->session->set_flashdata('pesan','Login Gagal!');
                 redirect('Ctampilan/login','refresh');
@@ -32,7 +36,9 @@
         }
 
         function logout() {
-            $this->session->unset_userdata('');
+            $this->session->unset_userdata('is_loggeg_in');
+            $this->session->sess_destroy();
+            redirect('Ctampilan/login', 'refresh');
         }
     }
 ?>
