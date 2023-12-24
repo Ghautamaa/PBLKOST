@@ -14,19 +14,19 @@
   <form action="/action_page.php">
     <div class="mb-3 mt-3">
       <label for="email">Nama Kost :</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <input type="text" class="form-control" id="Nama" placeholder="Masukan Nama Kost" name="Nama">
     </div>
     <div class="mb-3">
-      <label for="pwd">Alamat Kost :</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <label for="alamat">Alamat Kost :</label>
+      <input type="text" class="form-control" id="Alamat" placeholder="Masukan alamat kost" name="Alamat">
     </div>
     <div class="mb-3">
-      <label for="pwd">Password:</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <label for="harga">Harga Kost :</label>
+      <input type="text" class="form-control" id="Harga" placeholder="Masukan harga kost" name="Harga">
     </div>
     <div class="mb-3">
-      <label for="pwd">Password:</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <label for="Kodepos">Kode Pos :</label>
+      <input type="text" class="form-control" id="Kodepos" placeholder="Masukan Kode Pos" name="Kodepos">
     </div>
     <div class="mb-3">
       <label for="pwd">Deskripsi :</label>
