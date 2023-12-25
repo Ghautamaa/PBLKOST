@@ -35,7 +35,7 @@
             }
         }
 
-        function logout() {
+    function logout() {
             $this->session->unset_userdata('is_loggeg_in');
             $this->session->sess_destroy();
             redirect('Ctampilan/login', 'refresh');

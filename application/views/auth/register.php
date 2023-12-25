@@ -12,9 +12,7 @@
             background-size:cover;
             background-repeat: no-repeat;
           }
-          
-          
-      </style>
+    </style>
   </head>
   <body>
     <div class="bg">
