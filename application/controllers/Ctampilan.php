@@ -1,15 +1,11 @@
 <?php 
     class Ctampilan extends CI_Controller {
-
-        function login() {
-            $this->load->view('auth/login.php');
-            $this->load->helper('url');
+        public function __construct(){
+            parent::__construct();
+            $this->load->model('mvalidasi');
+            $this->mvalidasi->validasi();
         }
-
-        function register() {
-            $this->load->view('auth/register.php');
-        }
-
+        
         function dashboard_penyewa() {
             $this->load->view('penyewa/dashboard');
         }

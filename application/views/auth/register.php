@@ -28,7 +28,7 @@
       <div class="row h-100 col-6 d-flex justify-content-center align-items-center " id="container">
         <div class="col-lg-7 col-md-8 col-sm-10 border-dark ">
           <h2 class="text-center py-3 ">Form Register</h2>
-		  <form method="post" action="<?php echo base_url('Cdaftaruser/simpan_daftar')?>">
+		  <form method="post" action="<?php echo base_url('auth/simpan_daftar')?>">
               <?php
               $pesan=$this->session->flashdata('pesan');
               if (!empty($pesan))
@@ -60,7 +60,7 @@
               </select>
               <!-- bagian button -->
               <div class="pt-3 d-flex align-items-center justify-content-between">
-				      <a class="btn btn-info" href="<?php echo base_url('Ctampilan/login'); ?>">Back</a>
+				      <a class="btn btn-info" href="<?php echo base_url('Auth/clogin'); ?>">Back</a>
                 <input type="submit" value="Sign Up" class="btn btn-success" id="signup">
               </div>
               <!-- term & Privacy -->

@@ -5,8 +5,8 @@
 		{
 			parent::__construct();
             $this->load->model('mdaftarkost');
+            
 		}
-
         
 
         function simpan_daftarkost() {

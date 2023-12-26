@@ -3,10 +3,10 @@
 	{
 		function validasi()
 		{
-			if ($this->session->userdata('nama_user')=='')
+			if ($this->session->userdata('id_user')=='')
 			{
 				echo "<script>alert ('Anda tidak dapat mengakses halaman ini..!');</script>";
-				redirect('Ctampilan/login','refresh');
+				redirect('Auth/Clogin','refresh');
 			}
 		}
 		

@@ -14,31 +14,29 @@
             $querry= $this->db->query($sql);
             if($querry->num_rows()> 0){ 
                 $data=$querry->row();
-                $array=array(
+                $session_data=array(
                     'id_user'=>$data->id_user,
                     'nama_user'=>$data->nama_user,
                     'level'=> $data->level,
-                    'is_logged_in' => true
+                    'status' => true
                 );
+                $this->session->set_userdata($session_data);
                 if($data->level == 'penyewa'){
-                    $this->session->set_userdata($array);
                     return redirect('Ctampilan/dashboard_penyewa');
                 }elseif($data->level == 'pemilik'){
-                    $this->session->set_userdata($array);
                     return redirect('Ctampilan/dashboard_pemilik');
                 }
 
             
             } else {
                 $this->session->set_flashdata('pesan','Login Gagal!');
-                redirect('Ctampilan/login','refresh');
+                redirect('Auth/login','refresh');
             }
         }
 
-    function logout() {
-            $this->session->unset_userdata('is_loggeg_in');
+        function logout() {
             $this->session->sess_destroy();
-            redirect('Ctampilan/login', 'refresh');
+            return redirect('Auth/Clogin');
         }
     }
 ?>

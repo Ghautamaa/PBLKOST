@@ -35,7 +35,7 @@
       </li>
     </ul>
     <ul class="nav-item">
-      <a href="<?php echo base_url('Clogin/logout')?>" class="btn btn-danger">logout</a></li>
+      <a href="<?php echo base_url('Auth/logout')?>" class="btn btn-danger">logout</a></li>
     </ul>
     
   </div>
