@@ -35,15 +35,15 @@
                             return redirect('Ctampilan/admin');
                         }
                     }else{
-                        $this->session->set_flashdata('pesan','akun belum teraktivasi');
+                        $this->session->set_flashdata('pesan','Akun belum Diaktivasi');
                         redirect('Auth/clogin');
                     }
                 } else{
-                    $this->session->set_flashdata('pesan','password salah!');
+                    $this->session->set_flashdata('pesan','Password yang anda masukan salah!!');
                     redirect('Auth/clogin');
                 }
             } else{
-                $this->session->set_flashdata('pesan','EMAIL BELUM TERDAFTAR!');
+                $this->session->set_flashdata('pesan','Email yang anda masukan belum terdaftar!!');
                 redirect('Auth/clogin');
             } 
         }
@@ -100,7 +100,7 @@
             
             $querry= $this->db->get_where('tbuser', ['alamat_email'=>$email]);
             if($querry->num_rows()> 0){
-                $this->session->set_flashdata('pesan','email yang anda gunakan sudah terdaftar');
+                $this->session->set_flashdata('pesan','Email yang anda gunakan sudah terdaftar!!');
             }else{
                 $insert = $this->db->insert('tbuser',$data);
                 $this->db->insert('id_token', $user_token);
@@ -109,11 +109,11 @@
             
             
             if(isset($insert)){
-                $this->session->set_flashdata('pesan','email vefirikasi sudat terkirim ke alamat email '.$email.' link akan kadaluarsa dalam 2 jam' );
+                $this->session->set_flashdata('pesan','Email vefirikasi sudah terkirim ke alamat email '.$email.', link akan kadaluarsa dalam 2 jam!' );
                 $this->sendEmail($token, 'verify');
                 return redirect('auth/Clogin');
             } else {
-                $this->session->set_flashdata('pesan','Data Diri Yang Dimasukan Sudah Ada..');
+                $this->session->set_flashdata('pesan','Data diri yang anda masukan sudah ada!!');
                 return redirect('auth/register');
             }
 
@@ -136,11 +136,11 @@
     
                 $this->email->initialize($config);
     
-                $this->email->from('senjaghautama2004@gmail.com', 'testing pbl kost');
+                $this->email->from('senjaghautama2004@gmail.com', 'Aktivasi Akun KostFinder');
                 $this->email->to($this->input->post('alamat_email'));
     
                 if($type == 'verify'){
-                    $this->email->subject('verifikasi akun');
+                    $this->email->subject('Verifikasi Akun');
                     $this->email->message('klik link berikut untuk verifikasi: <a href="'. base_url() . 'Auth/verify?email=' . $this->input->post('alamat_email').'&&token='.$token. '">Aktivasi<a/>');
                 }
     
@@ -167,13 +167,13 @@
                             $this->db->update('tbuser');
     
                             
-                            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">akun' . $alamat_email . 'sudah di verifikasi!.</div>');
+                            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Akun ' . $alamat_email . ' sudah Aktif!.</div>');
                             $this->db->delete('id_token', ['alamat_email' => $alamat_email]);
                             redirect('auth/register');
 
                             }
                         else {
-                            $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">verifikasi akun gagal, token kadaluarsa.</div>');
+                            $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Aktivasi akun gagal, token kadaluarsa.</div>');
                             $this->db->delete('id_token', ['alamat_email' => $alamat_email]);
                             $this->db->delete('tbuser', ['alamat_email' => $alamat_email]);
                             redirect('auth/register');
