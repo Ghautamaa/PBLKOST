@@ -4,18 +4,21 @@
             parent::__construct();
             $this->load->model('mvalidasi');
             $this->mvalidasi->validasi();
+            $this->load->model('mdaftarkost');
+
         }
         
         function dashboard_penyewa() {
             $this->load->view('penyewa/dashboard');
         }
         function dashboard_pemilik() {
-            $this->load->view('pemilik/dashboard');
+			$tampildata['data']=$this->mdaftarkost->tampildata();
+            $this->load->view('pemilik/dashboard', $tampildata);
         }
         function daftar_kost() {
-            $this->load->view('pemilik/daftarKost');
+            $this->load->view('pemilik/daftarKost');   
+        }
         
-    }
 }
 
 ?> 
