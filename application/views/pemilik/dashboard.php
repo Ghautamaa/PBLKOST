@@ -246,6 +246,17 @@
                             </ul>
                         </div>
                     </div>
+                    <?php
+		
+        if(empty($data))
+		{
+			echo "Data Kosong";	
+		}
+		else
+		{
+			$no=1;
+			foreach ($data as $item):
+	    ?>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
@@ -258,8 +269,8 @@
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Grapes</h4>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <h4>Kost<?php echo $item->namaKost ?></h4>
+                                                    <p>Deskripsi<?php echo $item->deskripsi ?></p>
                                                     <div class="d-flex justify-content-between flex-lg-wrap">
                                                         <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
                                                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
@@ -563,6 +574,13 @@
                 </div>      
             </div>
         </div>
+
+        <?php
+        $no++;
+        endforeach;
+        }
+        ?>
+
         <!-- Fruits Shop End-->
 
 

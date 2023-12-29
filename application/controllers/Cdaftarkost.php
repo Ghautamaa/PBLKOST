@@ -13,5 +13,13 @@
             $this->mdaftarkost->simpan_daftarkost();
         }
 
+        function tampil()
+        {
+            $tampildata['data'] = $this->mdaftarkost->tampildata();
+            // var_dump($tampildata);die;
+            $this->load->view('pemilik/dashboard', $tampildata);
+        }
+
+
     }
 ?>

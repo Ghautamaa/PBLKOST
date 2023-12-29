@@ -14,7 +14,7 @@
         }
         function daftar_kost() {
             $this->load->view('pemilik/daftarKost');
-        
+
     }
 }
 
