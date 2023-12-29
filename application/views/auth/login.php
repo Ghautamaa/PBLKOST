@@ -29,7 +29,22 @@
           <div class="h-100 col-6 d-flex justify-content-center align-items-center pt-5">
             <div class="col-lg-8 ">
               <h2 class="text-center py-3 d-flex align-items-center justify-content-center">Login</h2>
-              <form name="formlogin" method="post" action="<?php echo base_url('Auth/login')?>">
+              <form name="formlogin" method="post" action="<?php echo base_url('Auth/Plogin')?>">
+              <?php
+              $pesan=$this->session->flashdata('pesan');
+              if (!empty($pesan))
+              {
+                ?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                 <?php
+                 echo ($pesan)
+                 ?>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <?php
+              }
+            ?>
+              
                 <div class="mx-3 my-4">
                   <label class="form-label">Email</label>
                   <input type="email" class="form-control mb-2" placeholder="example@yahoo.com" name="alamat_email">                                                                                                                                                                          

@@ -28,7 +28,7 @@
       <div class="row h-100 col-6 d-flex justify-content-center align-items-center " id="container">
         <div class="col-lg-7 col-md-8 col-sm-10 border-dark ">
           <h2 class="text-center py-3 ">Form Register</h2>
-		  <form method="post" action="<?php echo base_url('auth/simpan_daftar')?>">
+		  <form method="post" action="<?php echo base_url('auth/doregister')?>">
               <?php
               $pesan=$this->session->flashdata('pesan');
               if (!empty($pesan))
@@ -55,8 +55,8 @@
               <label class="form-label">Daftar Sebagai</label>
               <select name="level" id="" class="w-100 rounded-2" style="height: 37px;">
                 <option value="" disabled selected>-- Pilih Role --</option>
-                <option value="penyewa">Penyewa Kos</option>
-                <option value="pemilik">Pemilik Kos</option>
+                <option value="2">Penyewa Kos</option>
+                <option value="3">Pemilik Kos</option>
               </select>
               <!-- bagian button -->
               <div class="pt-3 d-flex align-items-center justify-content-between">
