@@ -64,6 +64,7 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Kost</a>
                             <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
@@ -218,28 +219,28 @@
                             <ul class="nav nav-pills d-inline-flex text-center mb-5">
                                 <li class="nav-item">
                                     <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                                        <span class="text-dark" style="width: 130px;">All Products</span>
+                                        <span class="text-dark" style="width: 130px;">Semua Kost</span>
                                     </a>
                                 </li>
                                 <!-- BISA LOKASI/HARGA MUNGKIN -->
                                 <li class="nav-item">
                                     <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                        <span class="text-dark" style="width: 130px;">Vegetables</span>
+                                        <span class="text-dark" style="width: 130px;">Jakarta</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                        <span class="text-dark" style="width: 130px;">Fruits</span>
+                                        <span class="text-dark" style="width: 130px;">Bali</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                        <span class="text-dark" style="width: 130px;">Bread</span>
+                                        <span class="text-dark" style="width: 130px;">Jawa Barat</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                        <span class="text-dark" style="width: 130px;">Meat</span>
+                                        <span class="text-dark" style="width: 130px;">NTT</span>
                                     </a>
                                 </li>
                             </ul>
@@ -253,7 +254,7 @@
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                    <img src="<?=base_url()?>assets/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
@@ -269,7 +270,7 @@
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                    <img src="<?=base_url()?>assets/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
@@ -285,7 +286,7 @@
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                    <img src="<?=base_url()?>assets/img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
@@ -301,7 +302,7 @@
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                    <img src="<?=base_url()?>assets/img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
