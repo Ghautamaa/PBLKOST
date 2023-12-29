@@ -45,7 +45,7 @@
     </div>
     <div class="mb-3">
       <p class="mb-1"><label for="Deskripsi">Deskripsi :</label></p>
-      <textarea name="deskirpsi" id="deskirpsi" cols="100" rows="10" required></textarea>
+      <textarea name="deskripsi" id="deskripsi" cols="100" rows="10" required></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
