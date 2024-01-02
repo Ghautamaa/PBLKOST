@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Des 2023 pada 15.45
+-- Waktu pembuatan: 02 Jan 2024 pada 05.39
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -57,6 +57,21 @@ INSERT INTO `role_id` (`id`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbkost`
+--
+
+CREATE TABLE `tbkost` (
+  `id_kost` int(11) NOT NULL,
+  `namaKost` varchar(50) NOT NULL,
+  `alamatKost` varchar(50) NOT NULL,
+  `hargaKost` varchar(100) NOT NULL,
+  `kodepos` varchar(10) NOT NULL,
+  `deskripsi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbuser`
 --
 
@@ -77,7 +92,7 @@ CREATE TABLE `tbuser` (
 --
 
 INSERT INTO `tbuser` (`id_user`, `nama_user`, `nomor_whatsapp`, `image`, `alamat_email`, `password`, `level`, `is_active`, `date_created`) VALUES
-(71, 'Tama', '0895327714616', 'default.jpg', 'senjaghautama2004@gmail.com', '$2y$10$VCU6WhZ39Rv0SH9gmQqS.e3eaOwS6hOX7tHfAw/fYqO6tkhkRbFyW', 2, 1, '2023-12-28');
+(75, 'aura', '0895327714616', 'default.jpg', 'auranathania32@gmail.com', '$2y$10$JhAt4ZQIJTYa1/Vql9FUZeLGVtVA188IAAPnVn79q/JC27wjBWmSa', 3, 1, '2023-12-29');
 
 --
 -- Indexes for dumped tables
@@ -96,6 +111,12 @@ ALTER TABLE `role_id`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `tbkost`
+--
+ALTER TABLE `tbkost`
+  ADD PRIMARY KEY (`id_kost`);
+
+--
 -- Indeks untuk tabel `tbuser`
 --
 ALTER TABLE `tbuser`
@@ -109,7 +130,7 @@ ALTER TABLE `tbuser`
 -- AUTO_INCREMENT untuk tabel `id_token`
 --
 ALTER TABLE `id_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT untuk tabel `role_id`
@@ -118,10 +139,16 @@ ALTER TABLE `role_id`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT untuk tabel `tbkost`
+--
+ALTER TABLE `tbkost`
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `tbuser`
 --
 ALTER TABLE `tbuser`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
