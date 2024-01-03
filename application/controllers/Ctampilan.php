@@ -28,6 +28,9 @@
             
         }
         
+            $this->load->view('pemilik/daftarKost');
+
+    }
 }
 
 ?> 

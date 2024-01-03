@@ -6,6 +6,7 @@
             $this->db->insert ('tbkost',$data);
             $this->session->set_flashdata('pesan',' Kami akan mengirimkan email berupa kode verifikasi ke email anda...');
             redirect ('Ctampilan/daftar_kost','refresh');
+            
         } 
 
         function tampildata()
@@ -29,4 +30,6 @@
 		
         
     }
+
+    
 ?>
