@@ -23,6 +23,10 @@
             $this->load->view('pemilik/cariKost', $tampildata);
 		}
         
+        // test func
+        function profile_penyewa(){
+            
+        }
         
 }
 
