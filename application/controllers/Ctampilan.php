@@ -18,6 +18,15 @@
         function daftar_kost() {
             $this->load->view('pemilik/daftarKost');   
         }
+        function cari_kost(){
+            $tampildata['data']=$this->mdaftarkost->tampildata();
+            $this->load->view('pemilik/cariKost', $tampildata);
+		}
+        
+        // test func
+        function profile_penyewa(){
+            
+        }
         
 }
 
