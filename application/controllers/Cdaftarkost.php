@@ -14,6 +14,14 @@
         }
 
         function tampil()
+        {
+            $tampildata['data'] = $this->mdaftarkost->tampildata();
+            // var_dump($tampildata);die;
+            $this->load->view('pemilik/dashboard', $tampildata);
+        }
+
+
+        function tampil()
 		{
 			$tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('pemilik/dashboard',$tampildata);

@@ -25,12 +25,9 @@
         
         // test func
         function profile_penyewa(){
-            
-        }
         
             $this->load->view('pemilik/daftarKost');
-
+        }
     }
-}
 
 ?> 
