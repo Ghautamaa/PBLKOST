@@ -53,6 +53,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
                     <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Kost Finder</h1></a>
@@ -62,11 +63,11 @@
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Kost</a>
-                            <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link">Cari Kost</a>
+                            <a href="shop-detail.html" class="nav-item nav-link">Kost Detail</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cari apa?</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
                                     <a href="cart.html" class="dropdown-item">Cart</a>
                                     <a href="chackout.html" class="dropdown-item">Chackout</a>
@@ -74,7 +75,7 @@
                                     <a href="404.html" class="dropdown-item">404 Page</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
@@ -213,7 +214,7 @@
                 <div class="tab-class text-center">
                     <div class="row g-4">
                         <div class="col-lg-4 text-start">
-                            <h1>HOT Kost</h1>
+                            <h1>Rekomendasi Kost</h1>
                         </div>
                         <div class="col-lg-8 text-end">
                             <ul class="nav nav-pills d-inline-flex text-center mb-5">
@@ -515,7 +516,7 @@
                     <div class="col-md-6 col-lg-4">
                         <a href="#">
                             <div class="service-item bg-secondary rounded border border-secondary">
-                                <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <img src="<?=base_url()?>assets/img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
                                 <div class="px-4 rounded-bottom">
                                     <div class="service-content bg-primary text-center p-4 rounded">
                                         <h5 class="text-white">Fresh Apples</h5>
@@ -528,7 +529,7 @@
                     <div class="col-md-6 col-lg-4">
                         <a href="#">
                             <div class="service-item bg-dark rounded border border-dark">
-                                <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <img src="<?=base_url()?>assets/img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="">
                                 <div class="px-4 rounded-bottom">
                                     <div class="service-content bg-light text-center p-4 rounded">
                                         <h5 class="text-primary">Tasty Fruits</h5>
@@ -541,7 +542,7 @@
                     <div class="col-md-6 col-lg-4">
                         <a href="#">
                             <div class="service-item bg-primary rounded border border-primary">
-                                <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <img src="<?=base_url()?>assets/img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="">
                                 <div class="px-4 rounded-bottom">
                                     <div class="service-content bg-secondary text-center p-4 rounded">
                                         <h5 class="text-white">Exotic Vegitable</h5>
@@ -975,7 +976,7 @@
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
                                 <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    <img src="<?=base_url()?>assets/img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
                                     <h4 class="text-dark">Client Name</h4>
@@ -1025,7 +1026,7 @@
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
                                 <div class="bg-secondary rounded">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    <img src="<?=base_url()?>assets/img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
                                     <h4 class="text-dark">Client Name</h4>
@@ -1054,8 +1055,8 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Fruitables</h1>
-                                <p class="text-secondary mb-0">Fresh products</p>
+                                <h1 class="text-primary mb-0">Kost Finder</h1>
+                                <p class="text-secondary mb-0">Aman & Terpercaya</p>
                             </a>
                         </div>
                         <div class="col-lg-6">
