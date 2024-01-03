@@ -26,7 +26,7 @@
                         'is_active'=> $data['is_active']
                     );
                     if($data['is_active'] == 1){
-                        $this->session->set_userdata($session_data);
+                        $this->session->set_userdata($session_data); 
                         if($data['level'] == '2'){
                             return redirect('Ctampilan/dashboard_penyewa');
                         }elseif($data['level'] == '3'){
