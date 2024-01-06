@@ -133,12 +133,17 @@
                 <div class="row g-4">
                     <div class="col-lg-12">
                         <div class="row g-4">
+
+                            <!-- Search Button -->
                             <div class="col-xl-3">
-                                <div class="input-group w-100 mx-auto d-flex">
-                                    <input type="search" class="form-control p-3" placeholder="Masukan Kost" aria-describedby="search-icon-1">
-                                    <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                                </div>
+                                <form action="<?= base_url('Cdaftarkost/cari_kost'); ?>" method="post" class="w-100 mx-auto d-flex">
+                                    <input type="search" name="keyword" class="form-control p-3" placeholder="Masukan Kost" aria-describedby="search-icon-1">
+                                    <!-- <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span> -->
+                                    <button type="submit" class="btn btn-primary input-group-text p-3 "><i class="fa fa-search"></i></button>
+                                </form>
                             </div>
+                            <!-- End Search Button -->
+                            
                             <div class="col-6"></div>
                             <div class="col-xl-3">
                                 <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
@@ -156,7 +161,9 @@
                             <div class="col-lg-3">
                                 <div class="row g-4">
                                     <div class="col-lg-12">
-                                    
+                                        
+                                        
+                                        <!-- List Berapa banyak data pada sebuah lokasi kostnya -->
                                         <div class="mb-3">
                                             <h4>Lokasi Kost</h4>
                                             <?php
@@ -176,7 +183,7 @@
                                                 <ul class="list-unstyled fruite-categorie">
                                                     <li>
                                                         <div class="d-flex justify-content-between fruite-name">
-                                                            <a href="#"><?php echo $alamatKost; ?></a>
+                                                            <a ><?php echo $alamatKost; ?></a>
                                                             <span>(<?php echo count($items); ?>)</span>
                                                         </div>
                                                     </li>
@@ -185,43 +192,27 @@
                                                 endforeach;
                                             }
                                             ?>
-
-
+                                        <!-- End -->
+                                        
+                                            
                                         </div>
                                     </div>
-
+                                    
+                                    <!-- Start Fasilitas -->
                                     <div class="col-lg-12">
                                         <div class="mb-3">
-                                            <h4 class="mb-2">Price</h4>
-                                            <input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" value="0" oninput="amount.value=rangeInput.value">
-                                            <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4>Additional</h4>
+                                            
+                                            <h4>Fasilitas Kost</h4>
                                             <div class="mb-2">
                                                 <input type="radio" class="me-2" id="Categories-1" name="Categories-1" value="Beverages">
-                                                <label for="Categories-1"> Organic</label>
+                                                <label for="Categories-1"> Ac</label>
                                             </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-2" name="Categories-1" value="Beverages">
-                                                <label for="Categories-2"> Fresh</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-3" name="Categories-1" value="Beverages">
-                                                <label for="Categories-3"> Sales</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-4" name="Categories-1" value="Beverages">
-                                                <label for="Categories-4"> Discount</label>
-                                            </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="me-2" id="Categories-5" name="Categories-1" value="Beverages">
-                                                <label for="Categories-5"> Expired</label>
-                                            </div>
+                                            
                                         </div>
                                     </div>
+                                    <!-- End Fasilitas -->
+
+                                    <!-- Rencana kost yang ada promo -->
                                     <div class="col-lg-12">
                                         <h4 class="mb-3">Featured products</h4>
                                         <div class="d-flex align-items-center justify-content-start">
@@ -285,29 +276,24 @@
                                             <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="position-relative">
-                                            <img src="img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
-                                            <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
-                                                <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- End -->
+
                                 </div>
                             </div>
 
-                            <!-- Start Kost -->
+                            <!-- Start List Kost -->
                             <div class="col-lg-9">
                                 <div class="row g-4 justify-content-center">
-                                    
+
+                                    <!-- Start code card kost -->
                                      <?php
                                         if (empty($data)) {
                                             echo "Data Kosong";	
                                         } else {
                                             $no = 1;
-                                            foreach ($data as $item):
-                                            
+                                            foreach ($data as $item): 
                                     ?>
+
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
@@ -322,18 +308,28 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <?php
-                                        $no++;
-                                        
+                                        $no++;                                       
                                         endforeach;
                                         }
                                     ?>
-                                    
-                                    
+                                    <!-- End Card Kost -->
 
-                                    <!-- End Start Kost -->
+                                    <!-- Start Hasil pencarian di sini -->
+                                    <?php if (!empty($data)): ?>
+                                        <div class="row g-4 justify-content-center">
+                                            <?php foreach ($data as $item): ?>
+                                                <!-- Tampilkan data hasil pencarian di sini -->
+                                            
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php else: ?>
+                                        <!-- Data kosong -->
+                                    <?php endif; ?>
+                                    <!-- End Hasil Pencarian Kost -->
 
-                                    <!-- Start tombol -->
+                                    <!--  tombol 1-seterusnya -->
                                     <div class="col-12">
                                         <div class="pagination d-flex justify-content-center mt-5">
                                             <a href="#" class="rounded">&laquo;</a>
@@ -346,14 +342,18 @@
                                             <a href="#" class="rounded">&raquo;</a>
                                         </div>
                                     </div>
+                                    <!-- End Tombol -->
+
                                 </div>
                             </div>
+                            <!-- End List kost -->
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fruits Shop End-->
+        <!-- End-->
 
 
         <!-- Footer Start -->

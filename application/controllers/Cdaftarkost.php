@@ -16,16 +16,15 @@
         function tampil()
         {
             $tampildata['data'] = $this->mdaftarkost->tampildata();
-            // var_dump($tampildata);die;
             $this->load->view('pemilik/dashboard', $tampildata);
         }
 
 
-        function tampil()
-		{
-			$tampildata['data']=$this->mdaftarkost->tampildata();
-            $this->load->view('pemilik/dashboard',$tampildata);
-		}
+        function cari_kost() {
+            $keyword = $this->input->post('keyword');
+            $data['data'] = $this->mdaftarkost->searchKost($keyword);
+            $this->load->view('pemilik/carikost', $data);
+        }
 
     }
 ?>
