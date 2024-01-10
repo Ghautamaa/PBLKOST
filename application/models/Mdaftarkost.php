@@ -2,11 +2,34 @@
     class Mdaftarkost extends CI_Model {
         function simpan_daftarkost()
         {
-            $data=$_POST; //boleh pakai ini tapi name pada form harus sama dengan fill pada database
-            $this->db->insert ('tbkost',$data);
-            $this->session->set_flashdata('pesan',' Kami akan mengirimkan email berupa kode verifikasi ke email anda...');
+            $data=$_POST; //boleh pakai in 	i tapi name pada form harus sama dengan fill pada database
+			
+			$config['upload_path']          = './assets/uploadimg/';
+			$config['allowed_types']        = 'jpeg|jpg|png';
+			$config['max_size']             = 1024;
+
+
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('gambar'))
+			{
+					// $error = array('error' => $this->upload->display_errors());
+					$this->session->set_flashdata('pesan',$this->upload->display_errors());
+
+					// $this->load->view('upload_form', $error);
+				}
+				else
+				{
+					// $data = array('upload_data' => $this->upload->data());
+					$gambar = $this->upload->data('file_name');
+					$this->session->set_flashdata('pesan',' Kami akan mengirimkan email berupa kode verifikasi ke email anda...');
+					// $this->load->view('upload_success', $data);
+				}
+				
+				
+				$data['gambar']=  $gambar;
+				$this->db->insert ('tbkost',$data);
             redirect ('Ctampilan/daftar_kost','refresh');
-            
         } 
 
         function tampildata()
@@ -35,7 +58,9 @@
 			return $query->result();
 		}
 		
-
+		public function do_upload()
+        {
+        }
 
 		
         

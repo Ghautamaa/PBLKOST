@@ -32,7 +32,7 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-md-7 rounded-5 mb-2 text-white px-5" style="background-color:#1d70f5; opacity: 1;">
-      <form name="daftarkost" action="<?php echo base_url ('cdaftarkost/simpan_daftarkost'); ?>" method="post">
+      <form name="daftarkost" action="<?php echo base_url ('cdaftarkost/simpan_daftarkost'); ?>" method="post" enctype="multipart/form-data">
       <?php
                     $pesan=$this->session->flashdata('pesan');
                     if ($pesan=="")
@@ -54,11 +54,11 @@
         </div>
         <div class="mb-3">
           <label for="alamat">Alamat Kost :</label>
-          <input type="text" class="form-control" id="alamatKost" placeholder="Masukan alamat kost" name="alamatKost" required>
+          <input type="text" class="form-control" id="alamatKost" placeholder="Masukan Alamat Kost" name="alamatKost" required>
         </div>
         <div class="mb-3">
           <label for="harga">Harga Kost :</label>
-          <input type="text" class="form-control" id="hargaKost" placeholder="Masukan harga kost" name="hargaKost" required>
+          <input type="text" class="form-control" id="hargaKost" placeholder="Masukan Harga Kost" name="hargaKost" required>
         </div>
         <div class="mb-3">
           <label for="Kodepos">Kode Pos :</label>
@@ -68,6 +68,10 @@
           <p class="mb-1"><label for="Deskripsi">Deskripsi :</label></p>
           <textarea name="deskripsi" id="deskripsi" cols="71" rows="10" required></textarea>
         </div>
+        <div class="mb-3">
+          <p class="mb-1"><label for="GambarKost">Gambar Kost :</label></p>
+          <input type="file" name="gambar" id="gambar" required>
+        </div>
         <div class="d-flex justify-content-between mb-3">
           <div class="">
             <a class="btn btn-danger " href="<?php echo base_url('ctampilan/dashboard_pemilik'); ?>">Back</a>
@@ -75,46 +79,9 @@
           <div class="">
           <button typ e="submit" class="btn btn-success ">Submit</button>  
           </div>
-      </form>
-  <h2>Form Pendaftaran Kost</h2>
-  <form name="daftarkost" action="<?php echo base_url ('cdaftarkost/simpan_daftarkost'); ?>" method="post">
-  <?php
-                $pesan=$this->session->flashdata('pesan');
-                 if ($pesan=="")
-                 {
-                    echo "";	
-                 }
-                 else
-                 {
-            ?>
-              <div class="alert alert-success alert-dismissible mt-4">
-                 <?php echo $pesan; ?>                        
-              </div>
-            <?php
-                }
-            ?>    
-    <div class="mb-3 mt-3">
-      <label for="email">Nama Kost :</label>
-      <input type="text" class="form-control" id="namaKost" placeholder="Masukan Nama Kost" name="namaKost" required>
+        </div>
+      </form> 
     </div>
-    <div class="mb-3">
-      <label for="alamat">Alamat Kost :</label>
-      <input type="text" class="form-control" id="alamatKost" placeholder="Masukan alamat kost" name="alamatKost" required>
-    </div>
-    <div class="mb-3">
-      <label for="harga">Harga Kost :</label>
-      <input type="text" class="form-control" id="hargaKost" placeholder="Masukan harga kost" name="hargaKost" required>
-    </div>
-    <div class="mb-3">
-      <label for="Kodepos">Kode Pos :</label>
-      <input type="text" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" name="kodepos" required>
-    </div>
-    <div class="mb-3">
-      <p class="mb-1"><label for="Deskripsi">Deskripsi :</label></p>
-      <textarea name="deskripsi" id="deskripsi" cols="100" rows="10" required></textarea>
-    </div>
-  </div>
-</div>
 
 </body>
 </html>
