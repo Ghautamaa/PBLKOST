@@ -19,6 +19,12 @@
             $this->load->view('pemilik/dashboard', $tampildata);
         }
 
+        
+        function tampilkanFasilitas()
+        {
+            $tampilFasilitas['data'] = $this->mdaftarkost->tampilFasilitas();
+            $this->load->view('pemilik/carikost', $tampilFasilitas);
+        }
 
         function cari_kost() {
             $keyword = $this->input->post('keyword');

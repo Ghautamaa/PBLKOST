@@ -35,6 +35,34 @@
 			return $query->result();
 		}
 		
+		function tampilFasilitas()
+		{
+
+			$nama_fasilitas = $this->input->post('nama_fasilitas');
+            $jumlah_fasilitas = $this->input->post('jumlah_fasilitas');
+
+
+			$data = array(
+                
+                'nama_fasilitas' => $nama_fasilitas,
+                'jumlah_fasilitas' => $jumlah_fasilitas
+               
+            );
+			$sql="select * from fasilitas";
+			$query=$this->db->query($sql);
+			if ($query->num_rows()>0)
+			{
+				foreach ($query->result() as $row)
+				{
+					$data[]=$row;
+				}	
+			}
+			else
+			{
+				$data="";	
+			}
+			return $data;
+		}
 
 
 		
