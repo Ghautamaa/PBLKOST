@@ -19,18 +19,18 @@
             $this->load->view('pemilik/dashboard', $tampildata);
         }
 
-        
-        function tampilkanFasilitas()
-        {
-            $tampilFasilitas['data'] = $this->mdaftarkost->tampilFasilitas();
-            $this->load->view('pemilik/carikost', $tampilFasilitas);
-        }
-
         function cari_kost() {
             $keyword = $this->input->post('keyword');
             $data['data'] = $this->mdaftarkost->searchKost($keyword);
             $this->load->view('pemilik/carikost', $data);
         }
+
+        public function detailKost($id)
+        {
+            $data['kost_detail'] = $this->mdaftarkost->getKostById($id);
+            $this->load->view('pemilik/detailKost', $data);
+        }
+
 
     }
 ?>

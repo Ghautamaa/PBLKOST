@@ -50,7 +50,6 @@
                         <div class="navbar-nav mx-auto">
                             <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link ">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/detail_kost'); ?>" class="nav-item nav-link active">Kost Detail</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cari apa?</a>
@@ -64,13 +63,10 @@
                             <a href="contact.html" class="nav-item nav-link">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <a href="#" class="position-relative me-4 my-auto">
-                                <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
-                            </a>
                             <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
+                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -120,14 +116,14 @@
                             <div class="col-lg-6">
                                 <div class="border rounded">
                                     <a href="#">
-                                        <img src="img/single-item.jpg" class="img-fluid rounded" alt="Image">
+                                        <img src="<?=base_url()?>assets/img/single-item.jpg" class="img-fluid rounded" alt="Image">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3">Brocoli</h4>
-                                <p class="mb-3">Category: Vegetables</p>
-                                <h5 class="fw-bold mb-3">3,35 $</h5>
+                                <h4 class="fw-bold mb-3"><?php echo $kost_detail->namaKost; ?></h4>
+                                <p class="mb-3"><?php echo $kost_detail->namaKost; ?></p>
+                                <h5 class="fw-bold mb-3">Rp. <?php echo $kost_detail->hargaKost; ?> / Bulan</h5>
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
@@ -135,8 +131,7 @@
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p class="mb-4">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                                <p class="mb-4">Susp endisse ultricies nisi vel quam suscipit. Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish</p>
+                                
                                 <div class="input-group quantity mb-5" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
@@ -165,11 +160,9 @@
                                 </nav>
                                 <div class="tab-content mb-5">
                                     <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-                                        <p>The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc. 
-                                            Susp endisse ultricies nisi vel quam suscipit </p>
-                                        <p>Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish filefish Antarctic 
-                                            icefish goldeye aholehole trumpetfish pilot fish airbreathing catfish, electric ray sweeper.</p>
+                                        <p><?php echo $kost_detail->deskripsi; ?></p>
                                         <div class="px-2">
+                                            
                                             <div class="row g-4">
                                                 <div class="col-6">
                                                     <div class="row bg-light align-items-center text-center justify-content-center py-2">
@@ -214,6 +207,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">

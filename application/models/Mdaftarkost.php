@@ -35,39 +35,11 @@
 			return $query->result();
 		}
 		
-		function tampilFasilitas()
+		function getKostById($id)
 		{
-
-			$nama_fasilitas = $this->input->post('nama_fasilitas');
-            $jumlah_fasilitas = $this->input->post('jumlah_fasilitas');
-
-
-			$data = array(
-                
-                'nama_fasilitas' => $nama_fasilitas,
-                'jumlah_fasilitas' => $jumlah_fasilitas
-               
-            );
-			$sql="select * from fasilitas";
-			$query=$this->db->query($sql);
-			if ($query->num_rows()>0)
-			{
-				foreach ($query->result() as $row)
-				{
-					$data[]=$row;
-				}	
-			}
-			else
-			{
-				$data="";	
-			}
-			return $data;
+			$this->db->where('id_kost', $id);
+			$query = $this->db->get('tbkost');
+			return $query->row(); // Mengembalikan satu baris hasil query
 		}
-
-
-		
-        
     }
-
-    
 ?>
