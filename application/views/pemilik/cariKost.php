@@ -172,8 +172,8 @@
                             <div class="col-lg-9">
                                 <div class="row g-4 justify-content-center">
 
-                                    <!-- Start code card kost -->
-                                     <?php
+                                    <!-- Start perulangan card kost -->
+                                    <?php
                                         if (empty($data)) {
                                             echo "Data Kosong";	
                                         } else {

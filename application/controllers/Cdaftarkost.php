@@ -15,8 +15,8 @@
 
         function tampil()
         {
-            $tampildata['data'] = $this->mdaftarkost->tampildata();
-            $this->load->view('pemilik/dashboard', $tampildata);
+            $data['kost_detail'] = $this->mdaftarkost->getKostById($id);
+            $this->load->view('pemilik/dashboard', $data);
         }
 
         function cari_kost() {
