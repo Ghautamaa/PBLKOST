@@ -172,7 +172,7 @@
                             <div class="col-lg-9">
                                 <div class="row g-4 justify-content-center">
 
-                                    <!-- Start perulangan card kost -->
+                                    <!-- Start perulangan kost -->
                                     <?php
                                         if (empty($data)) {
                                             echo "Data Kosong";	
@@ -180,7 +180,6 @@
                                             $no = 1;
                                             foreach ($data as $item): 
                                     ?>
-
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
