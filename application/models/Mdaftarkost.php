@@ -35,11 +35,11 @@
 			return $query->result();
 		}
 		
-
-
-		
-        
+		function getKostById($id)
+		{
+			$this->db->where('id_kost', $id);
+			$query = $this->db->get('tbkost');
+			return $query->row(); // Mengembalikan satu baris hasil query
+		}
     }
-
-    
 ?>

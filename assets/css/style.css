@@ -1,5 +1,5 @@
 
-/*** Spinner Start ***/
+/* ** Spinner Start **
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -24,9 +24,16 @@
     justify-content: center;
     transition: 0.5s;
     z-index: 99;
-}
+} */
 /*** Spinner End ***/
 
+.fixed{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
 
 /*** Button Start ***/
 .btn {
@@ -75,11 +82,11 @@
 }
 
 /*** Topbar Start ***/
-.fixed-top {
+/* .fixed-top {
     transition: 0.5s;
     background: var(--bs-white);
     border: 0;
-}
+} */
 
 .topbar {
     padding: 20px;
