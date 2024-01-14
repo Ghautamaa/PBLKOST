@@ -20,4 +20,5 @@ class Cprofile extends CI_Controller
         // $data
         $this->load->view('penyewa/profilPenyewa', $tampildata);
     }
+
 }
