@@ -40,9 +40,6 @@
             $this->load->view('pemilik/daftarKost');
         }
 
-
-
-
         // admin menu
         function tampilDataKost(){
             $tampildata['hasil']=$this->mprodi->tampilData();

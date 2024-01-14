@@ -97,7 +97,7 @@
 
         <!-- Single Page Header start -->
         <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-white display-6">Shop Detail</h1>
+            <h1 class="text-center text-white display-6">Kost Detail</h1>
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
@@ -116,13 +116,13 @@
                             <div class="col-lg-6">
                                 <div class="border rounded">
                                     <a href="#">
-                                        <img src="<?=base_url()?>assets/img/single-item.jpg" class="img-fluid rounded" alt="Image">
+                                        <img src="<?=base_url()?>assets/uploadimg/" class="img-fluid rounded" alt="Image">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <h4 class="fw-bold mb-3"><?php echo $kost_detail->namaKost; ?></h4>
-                                <p class="mb-3"><?php echo $kost_detail->namaKost; ?></p>
+                                <p class="mb-3"><?php echo $kost_detail->alamatKost; ?></p>
                                 <h5 class="fw-bold mb-3">Rp. <?php echo $kost_detail->hargaKost; ?> / Bulan</h5>
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
