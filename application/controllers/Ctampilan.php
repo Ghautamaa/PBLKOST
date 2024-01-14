@@ -22,6 +22,10 @@
             $tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('pemilik/cariKost', $tampildata);
 		}
+        function details_kost(){
+            $tampildata['data']=$this->mdaftarkost->tampildata();
+            $this->load->view('pemilik/detailKost', $tampildata);
+		}
         
         // test func
         function profile_penyewa(){

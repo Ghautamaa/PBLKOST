@@ -2,7 +2,7 @@
     class Mdaftarkost extends CI_Model {
         function simpan_daftarkost()
         {
-            $data=$_POST; //boleh pakai in 	i tapi name pada form harus sama dengan fill pada database
+            $data=$_POST; //boleh pakai ini tapi name pada form harus sama dengan fill pada database
 			
 			$config['upload_path']          = './assets/uploadimg/';
 			$config['allowed_types']        = 'jpeg|jpg|png';
@@ -58,13 +58,11 @@
 			return $query->result();
 		}
 		
-		public function do_upload()
-        {
-        }
-
-		
-        
+		function getKostById($id)
+		{
+			$this->db->where('id_kost', $id);
+			$query = $this->db->get('tbkost');
+			return $query->row(); // Mengembalikan satu baris hasil query
+		}
     }
-
-    
 ?>
