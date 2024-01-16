@@ -155,67 +155,55 @@
                                     <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
                                         <p><?php echo $kost_detail->deskripsi; ?></p>
                                     </div>
+                                    
                                     <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+                                        <?php foreach ($reviews as $review): ?>
                                         <div class="d-flex">
-                                            <img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
+                                            <img src="<?=base_url()?>assets/img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
                                             <div class="">
-                                                <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
+                                                <p class="mb-2" style="font-size: 14px;"><?= date('F j, Y, g:i a', strtotime($review->created_at)); ?></p>
                                                 <div class="d-flex justify-content-between">
-                                                    <h5>Jason Smith</h5>
-                                                    <div class="d-flex mb-3">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
+                                                    <h5><?= $review->nama_user; ?></h5>
+                                                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                                                        <?php if ($i <= $review->rating): ?>
+                                                            <i class="fa fa-star text-secondary"></i>
+                                                        <?php else: ?>
+                                                            <i class="fa fa-star"></i>
+                                                        <?php endif; ?>
+                                                    <?php endfor; ?>
                                                 </div>
-                                                <p>The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic 
-                                                    words etc. Susp endisse ultricies nisi vel quam suscipit </p>
+                                                <p><?= $review->comment; ?></p>
                                             </div>
                                         </div>
+                                        <?php endforeach; ?>
                                     </div>                                    
                                 </div>
                             </div>
-                            <form action="#">
+                            <form action="<?= base_url('Cdaftarkost/submitReview'); ?>" method="post">
                                 <h4 class="mb-5 fw-bold">Leave a Reply</h4>
-                                <div class="row g-4">
-                                    <div class="col-lg-6">
-                                        <div class="border-bottom rounded">
-                                            <input type="text" class="form-control border-0 me-4" placeholder="Yur Name *">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="border-bottom rounded">
-                                            <input type="email" class="form-control border-0" placeholder="Your Email *">
-                                        </div>
-                                    </div>
+                                <div class="row g-4" >
+                                        <!-- Tambahkan input untuk rating -->
+                                        <input type="hidden" name="id_kost" value="<?= $kost_detail->id_kost; ?>" >
                                     <div class="col-lg-12">
-                                        <div class="border-bottom rounded my-4">
-                                            <textarea name="" id="" class="form-control border-0" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
+                                        <div class="border-bottom rounded my-4" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);">
+                                            <textarea name="comment" class="form-control border-0" cols="30" rows="8" placeholder="Your Review *" spellcheck="false" required></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="d-flex justify-content-between py-3 mb-5">
                                             <div class="d-flex align-items-center">
                                                 <p class="mb-0 me-3">Please rate:</p>
-                                                <div class="d-flex align-items-center" style="font-size: 12px;">
-                                                    <i class="fa fa-star text-muted"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
+                                                <!-- Tambahkan input untuk rating -->
+                                                <input type="number" name="rating" class="form-control" min="1" max="5" required>
                                             </div>
-                                            <a href="#" class="btn border border-secondary text-primary rounded-pill px-4 py-3"> Post Comment</a>
+                                            <button type="submit" class="btn border border-secondary text-primary rounded-pill px-4 py-3"> Post Comment</button>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>                   
-                </div>
-            
+                </div>           
             </div>
         </div>
         <!-- Single Product End -->
