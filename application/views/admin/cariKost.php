@@ -39,7 +39,7 @@
 
 
         <!-- Navbar start -->
-        <div class="container-fluid fixed-top">
+        <div class="container-fluid fixed-top">           
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
                     <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Kost Finder</h1></a>
@@ -48,9 +48,9 @@
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link active">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/menu_admin'); ?>" class="nav-item nav-link">Admin</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cari apa?</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
@@ -63,11 +63,11 @@
                             <a href="contact.html" class="nav-item nav-link">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <a href="#" class="position-relative me-4 my-auto">
-                                <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+
+                            <!-- Logo Profile -->
+                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
+                                <i class="fas fa-user fa-2x"></i>
                             </a>
-                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto"><i class="fas fa-user fa-2x"></i></a>
                             <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>

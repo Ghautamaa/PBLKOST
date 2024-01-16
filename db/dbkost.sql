@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Jan 2024 pada 13.45
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.0.30
+-- Waktu pembuatan: 16 Jan 2024 pada 13.55
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `id_token` (
   `alamat_email` varchar(128) NOT NULL,
   `token` varchar(128) NOT NULL,
   `date_created` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -43,7 +43,7 @@ CREATE TABLE `id_token` (
 CREATE TABLE `role_id` (
   `id` int(11) NOT NULL,
   `role` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `role_id`
@@ -68,7 +68,7 @@ CREATE TABLE `tbkost` (
   `kodepos` varchar(10) NOT NULL,
   `deskripsi` text NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tbkost`
@@ -78,7 +78,38 @@ INSERT INTO `tbkost` (`id_kost`, `namaKost`, `alamatKost`, `hargaKost`, `kodepos
 (1, 'apa', 'dimana', '100000', '12345', 'apa aja ada', ''),
 (2, 'adad', 'ddada', '11111111', '12344', 'adsada', ''),
 (12, '12', '12', '12', '12', '12', 'Screenshot_(262)3.png'),
-(13, 'Aramugam', 'Jimbaran', '750000', '123456', 'Tidak ada fasilitas', 'Screenshot_(249).png');
+(13, 'Aramugam', 'Jimbaran', '750000', '123456', 'Tidak ada fasilitas', 'Screenshot_(249).png'),
+(14, 'juventur', 'Bali', '1.000.000', '144555', 'kos murah aman dan percaya', 'Screenshot_2024-01-12_095110.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbreviewkost`
+--
+
+CREATE TABLE `tbreviewkost` (
+  `id_review` int(11) NOT NULL,
+  `id_kost` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `rating` int(1) NOT NULL,
+  `comment` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbreviewkost`
+--
+
+INSERT INTO `tbreviewkost` (`id_review`, `id_kost`, `id_user`, `rating`, `comment`, `created_at`) VALUES
+(1, 14, 79, 3, 'wkwkwkw', '2024-01-16 09:50:21'),
+(2, 14, 79, 1, 'ataaa', '2024-01-16 09:51:30'),
+(3, 14, 79, 5, 'bejir', '2024-01-16 09:51:42'),
+(4, 1, 79, 5, 'keren', '2024-01-16 10:30:46'),
+(5, 1, 79, 1, 'Jelek amat', '2024-01-16 10:30:55'),
+(6, 1, 79, 2, 'aowkwkw kepencet bang', '2024-01-16 10:31:07'),
+(7, 1, 79, 1, 'aaa', '2024-01-16 10:31:12'),
+(8, 1, 79, 5, '5555555555555', '2024-01-16 10:31:19'),
+(9, 13, 79, 1, 'dongo', '2024-01-16 12:47:04');
 
 -- --------------------------------------------------------
 
@@ -96,16 +127,18 @@ CREATE TABLE `tbuser` (
   `level` int(11) NOT NULL,
   `is_active` int(1) NOT NULL,
   `date_created` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tbuser`
 --
 
 INSERT INTO `tbuser` (`id_user`, `nama_user`, `nomor_whatsapp`, `image`, `alamat_email`, `password`, `level`, `is_active`, `date_created`) VALUES
-(75, 'aura', '0895327714616', 'default.jpg', 'auranathania32@gmail.com', '$2y$10$JhAt4ZQIJTYa1/Vql9FUZeLGVtVA188IAAPnVn79q/JC27wjBWmSa', 3, 1, '2023-12-29'),
+(75, 'aura', '0895327714616', 'default.jpg', 'auranathania32@gmail.com', '$2y$10$JhAt4ZQIJTYa1/Vql9FUZeLGVtVA188IAAPnVn79q/JC27wjBWmSa', 2, 1, '2023-12-29'),
 (76, 'Juventus', '0812345678', 'default.jpg', 'arakianjuven@gmail.com', '$2y$10$zbgjVV34qiAd5uvsWrI.be7WiW3lhUsoxe8UrSJSe5GdK1Hp6AB7e', 3, 1, '2024-01-02'),
-(78, 'agus', '12212', 'default.jpg', 'arakianj@gmail.com', '$2y$10$V5IOzDbtQ.NbcQPMsaIQ7.QvsJ1gGdf0ThsMF4DU.hgyRjjMPUA1G', 3, 1, '2024-01-03');
+(78, 'agus', '12212', 'default.jpg', 'arakianj@gmail.com', '$2y$10$V5IOzDbtQ.NbcQPMsaIQ7.QvsJ1gGdf0ThsMF4DU.hgyRjjMPUA1G', 3, 1, '2024-01-03'),
+(79, 'yogats', '081', 'default.jpg', 'ikm.yogats@gmail.com', '$2y$10$77fJTcAGWaRwmKEiUEPX/uzckEHbCH4hcwmQkqCWMrefbqZQ0Hbdm', 3, 1, '2024-01-16'),
+(80, 'adadaddada', '081', 'default.jpg', 'gamingicocoa@gmail.com', '$2y$10$qOinFTju19021/cxAkvNzOWzWQszlS1UXCDN/s71BkHHil38DRwVm', 2, 1, '2024-01-16');
 
 --
 -- Indexes for dumped tables
@@ -130,6 +163,14 @@ ALTER TABLE `tbkost`
   ADD PRIMARY KEY (`id_kost`);
 
 --
+-- Indeks untuk tabel `tbreviewkost`
+--
+ALTER TABLE `tbreviewkost`
+  ADD PRIMARY KEY (`id_review`),
+  ADD KEY `fk_tbreviewkost_tbkost` (`id_kost`),
+  ADD KEY `fk_tbreviewkost_tbuser` (`id_user`);
+
+--
 -- Indeks untuk tabel `tbuser`
 --
 ALTER TABLE `tbuser`
@@ -143,7 +184,7 @@ ALTER TABLE `tbuser`
 -- AUTO_INCREMENT untuk tabel `id_token`
 --
 ALTER TABLE `id_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT untuk tabel `role_id`
@@ -155,13 +196,30 @@ ALTER TABLE `role_id`
 -- AUTO_INCREMENT untuk tabel `tbkost`
 --
 ALTER TABLE `tbkost`
-  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbreviewkost`
+--
+ALTER TABLE `tbreviewkost`
+  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbuser`
 --
 ALTER TABLE `tbuser`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `tbreviewkost`
+--
+ALTER TABLE `tbreviewkost`
+  ADD CONSTRAINT `fk_tbreviewkost_tbkost` FOREIGN KEY (`id_kost`) REFERENCES `tbkost` (`id_kost`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_tbreviewkost_tbuser` FOREIGN KEY (`id_user`) REFERENCES `tbuser` (`id_user`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

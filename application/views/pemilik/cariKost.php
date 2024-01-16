@@ -34,14 +34,14 @@
        
 
 
-        <!-- Navbar start -->
-        <div class="container-fluid fixed-top">
+        <!-- Navbar start -->      
+        <div class="container-fluid sticky-top">           
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Kost Finder</h1></a>
-                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-primary"></span>
-                    </button>
+                    <a href="index.html" class="navbar-brand"><h1 class="text-info display-6">Kost Finder</h1></a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-info"></span>
+                        </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
                             <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link">Home</a>
@@ -49,8 +49,11 @@
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
                             <a href="contact.html" class="nav-item nav-link">Contact kami</a>
                         </div>
-                        <div class="d-flex m-3 me-0">                          
-                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto"><i class="fas fa-user fa-2x"></i></a>
+                        <div class="d-flex m-3 me-0">
+                            <!-- Logo Profile -->
+                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
+                                <i class="fas fa-user fa-2x"></i>
+                            </a>
                             <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
@@ -58,38 +61,9 @@
             </div>
         </div>
         <!-- Navbar End -->
-
-
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
-
-
-        <!-- Single Page Header start -->
-        <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-white display-6">Kost Finder</h1>
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active text-white">Cari Kost</li>
-                <li class="breadcrumb-item"><a href="#">Daftar Kost</a></li>
-            </ol>
-        </div>
-        <!-- Single Page Header End -->
+        <!-- <div class="container-fluid  py-5">
+            <h1 class="text-center text-black display-6">Berbagai Kost Menarik yang mungkin kamu suka!</h1>
+        </div> -->
 
 
         <!-- Fruits Shop Start-->
@@ -104,7 +78,7 @@
                                 <form action="<?= base_url('Cdaftarkost/cari_kost'); ?>" method="post" class="w-100 mx-auto d-flex">
                                     <input type="search" name="keyword" class="form-control p-3" placeholder="Masukan Nama/Lokasi Kost" aria-describedby="search-icon-1">
                                     <!-- <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span> -->
-                                    <button type="submit" class="btn btn-primary input-group-text p-3 "><i class="fa fa-search"></i></button>
+                                    <button type="submit" class="btn btn-info input-group-text p-3 "><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
                             <!-- End Search Button -->
@@ -113,9 +87,7 @@
                         <div class="row g-4">
                             <div class="col-lg-3">
                                 <div class="row g-4">
-                                    <div class="col-lg-12">
-                                        
-                                        
+                                    <div class="col-lg-12">                           
                                         <!-- List Berapa banyak data pada sebuah lokasi kostnya -->
                                         <div class="mb-3">
                                             <h4>Lokasi Kost</h4>
@@ -168,12 +140,12 @@
                                             <div class="fruite-img">
                                                 <img src="<?=base_url()?>assets/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->alamatKost ?></div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->alamatKost ?></div>
+                                            <div class="p-4 border border-top-0 rounded-bottom">
                                                     <h4>Kost <?php echo $item->namaKost ?></h4>
                                                     <p><?php echo $item->alamatKost ?></p>
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
-                                                    <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Cek Kost!</a>
+                                                    <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-secondary"><i class=" me-2 text-info"></i> Cek Kost!</a>
                                             </div>
                                         </div>
                                     </div>
