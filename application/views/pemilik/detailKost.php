@@ -67,39 +67,6 @@
         </div>
         <!-- Navbar End -->
 
-
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
-
-
-        <!-- Single Page Header start -->
-        <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-white display-6">Kost Detail</h1>
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-white">Shop Detail</li>
-            </ol>
-        </div>
-        <!-- Single Page Header End -->
-
-
         <!-- Single Product Start -->
         <div class="container-fluid py-5 mt-5">
             <div class="container py-5">
@@ -129,8 +96,9 @@
 
                                     // Menghitung nilai rata-rata
                                     $averageRating = ($totalReviews > 0) ? $totalRating / $totalReviews : 0;
-
-                                    // Menampilkan bintang sesuai dengan nilai rata-rata
+                                ?>
+                                    <div class="d-flex mb-4">
+                                    <?php
                                     for ($i = 1; $i <= 5; $i++) {
                                         if ($i <= round($averageRating)) {
                                             echo '<i class="fa fa-star text-secondary"></i>';
@@ -139,13 +107,7 @@
                                         }
                                     }
                                     ?>
-                                <div class="d-flex mb-4">
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                                    </div>
                                 <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa  me-2 text-primary"></i> Hubungi Pemilik Kost</a>
                             </div>
                             <div class="col-lg-12">
@@ -153,7 +115,7 @@
                                     <div class="nav nav-tabs mb-3">
                                         <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
                                             id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
-                                            aria-controls="nav-about" aria-selected="true">Description</button>
+                                            aria-controls="nav-about" aria-selected="true">Deskripsi</button>
                                         <button class="nav-link border-white border-bottom-0" type="button" role="tab"
                                             id="nav-mission-tab" data-bs-toggle="tab" data-bs-target="#nav-mission"
                                             aria-controls="nav-mission" aria-selected="false">Reviews</button>
@@ -202,7 +164,7 @@
                                                 <p class="mb-0 me-3">Beri rating pada kost</p>
                                                 <input type="number" name="rating" class="form-control" min="1" max="5" required placeholder="1-5">
                                             </div>
-                                            <button type="submit" class="btn border border-secondary text-primary rounded-pill px-4 py-3"> Post Comment</button>
+                                            <button type="submit" class="btn border border-secondary text-primary rounded-pill px-4 py-3">Kirim</button>
                                         </div>
                                     </div>
                                 </div>
@@ -296,9 +258,6 @@
                         <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 my-auto text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
                     </div>
                 </div>

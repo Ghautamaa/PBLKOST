@@ -47,22 +47,9 @@
                             <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link active">Cari Kost</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cari apa?</a>
-                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a href="cart.html" class="dropdown-item">Cart</a>
-                                    <a href="chackout.html" class="dropdown-item">Chackout</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
-                            </div>
                             <a href="contact.html" class="nav-item nav-link">Contact kami</a>
                         </div>
-                        <div class="d-flex m-3 me-0">
-                            <a href="#" class="position-relative me-4 my-auto">
-                                <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
-                            </a>
+                        <div class="d-flex m-3 me-0">                          
                             <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto"><i class="fas fa-user fa-2x"></i></a>
                             <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
@@ -99,7 +86,7 @@
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active text-white">Cari Kost</li>
-                <li class="breadcrumb-item"><a href="#">Kost Detail</a></li>
+                <li class="breadcrumb-item"><a href="#">Daftar Kost</a></li>
             </ol>
         </div>
         <!-- Single Page Header End -->
@@ -183,7 +170,7 @@
                                             </div>
                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->alamatKost ?></div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4><?php echo $item->namaKost ?></h4>
+                                                    <h4>Kost <?php echo $item->namaKost ?></h4>
                                                     <p><?php echo $item->alamatKost ?></p>
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
                                                     <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Cek Kost!</a>
@@ -252,28 +239,6 @@
                             
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">Shop Info</h4>
-                            <a class="btn-link" href="">About Us</a>
-                            <a class="btn-link" href="">Contact Us</a>
-                            <a class="btn-link" href="">Privacy Policy</a>
-                            <a class="btn-link" href="">Terms & Condition</a>
-                            <a class="btn-link" href="">Return Policy</a>
-                            <a class="btn-link" href="">FAQs & Help</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">Account</h4>
-                            <a class="btn-link" href="">My Account</a>
-                            <a class="btn-link" href="">Shop details</a>
-                            <a class="btn-link" href="">Shopping Cart</a>
-                            <a class="btn-link" href="">Wishlist</a>
-                            <a class="btn-link" href="">Order History</a>
-                            <a class="btn-link" href="">International Orders</a>
-                        </div>
-                    </div> -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Contact</h4>
@@ -300,13 +265,7 @@
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
-
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
+        <!-- Copyright End --> 
         
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
