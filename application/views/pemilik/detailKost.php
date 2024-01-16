@@ -109,7 +109,7 @@
                             <div class="col-lg-6">
                                 <div class="border rounded">
                                     <a href="#">
-                                        <img src="<?php echo $kost_detail->gambar; ?>" class="img-fluid rounded" alt="Image">
+                                        <img src="#" class="img-fluid rounded" alt="Image">
                                     </a>
                                 </div>
                             </div>
@@ -117,6 +117,28 @@
                                 <h4 class="fw-bold mb-3"><?php echo $kost_detail->namaKost; ?></h4>
                                 <p class="mb-3"><?php echo $kost_detail->alamatKost; ?></p>
                                 <h5 class="fw-bold mb-3">Rp. <?php echo $kost_detail->hargaKost; ?> / Bulan</h5>
+                                
+                                <?php
+                                    // Mendapatkan total rating
+                                    $totalRating = 0;
+                                    $totalReviews = count($reviews); // $reviews berisi data ulasan dari database
+
+                                    foreach ($reviews as $review) {
+                                        $totalRating += $review->rating;
+                                    }
+
+                                    // Menghitung nilai rata-rata
+                                    $averageRating = ($totalReviews > 0) ? $totalRating / $totalReviews : 0;
+
+                                    // Menampilkan bintang sesuai dengan nilai rata-rata
+                                    for ($i = 1; $i <= 5; $i++) {
+                                        if ($i <= round($averageRating)) {
+                                            echo '<i class="fa fa-star text-secondary"></i>';
+                                        } else {
+                                            echo '<i class="fa fa-star"></i>';
+                                        }
+                                    }
+                                    ?>
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
@@ -124,21 +146,7 @@
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                
-                                <div class="input-group quantity mb-5" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa  me-2 text-primary"></i> Hubungi Pemilik Kost</a>
                             </div>
                             <div class="col-lg-12">
                                 <nav>
@@ -180,21 +188,19 @@
                                 </div>
                             </div>
                             <form action="<?= base_url('Cdaftarkost/submitReview'); ?>" method="post">
-                                <h4 class="mb-5 fw-bold">Leave a Reply</h4>
+                                <h4 class="mb-5 fw-bold">Review Kost</h4>
                                 <div class="row g-4" >
-                                        <!-- Tambahkan input untuk rating -->
                                         <input type="hidden" name="id_kost" value="<?= $kost_detail->id_kost; ?>" >
                                     <div class="col-lg-12">
                                         <div class="border-bottom rounded my-4" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);">
-                                            <textarea name="comment" class="form-control border-0" cols="30" rows="8" placeholder="Your Review *" spellcheck="false" required></textarea>
+                                            <textarea name="comment" class="form-control border-0" cols="30" rows="8" placeholder="Tulis masukan mu disini" spellcheck="false" required></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="d-flex justify-content-between py-3 mb-5">
                                             <div class="d-flex align-items-center">
-                                                <p class="mb-0 me-3">Please rate:</p>
-                                                <!-- Tambahkan input untuk rating -->
-                                                <input type="number" name="rating" class="form-control" min="1" max="5" required>
+                                                <p class="mb-0 me-3">Beri rating pada kost</p>
+                                                <input type="number" name="rating" class="form-control" min="1" max="5" required placeholder="1-5">
                                             </div>
                                             <button type="submit" class="btn border border-secondary text-primary rounded-pill px-4 py-3"> Post Comment</button>
                                         </div>
