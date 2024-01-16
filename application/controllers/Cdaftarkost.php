@@ -8,15 +8,8 @@
             
 		}
         
-
         function simpan_daftarkost() {
             $this->mdaftarkost->simpan_daftarkost();
-        }
-
-        function tampil()
-        {
-            $data['kost_detail'] = $this->mdaftarkost->getKostById($id);
-            $this->load->view('pemilik/dashboard', $data);
         }
 
         function cari_kost() {
