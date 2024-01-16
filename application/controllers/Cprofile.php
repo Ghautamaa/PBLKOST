@@ -14,6 +14,11 @@ class Cprofile extends CI_Controller
         $tampildata['data'] = $this->mprofile->data();
         $this->load->view('penyewa/profilPenyewa', $tampildata);
     }
+    
+    function tampilprofile(){
+        $tampildata['data'] = $this->mprofile->data();
+        $this->load->view('penyewa/profilPenyewa', $tampildataprofile);
+    }
 
 }
 ?>

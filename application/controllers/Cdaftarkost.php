@@ -44,5 +44,11 @@
 
             redirect('Cdaftarkost/detailKost/' . $id_kost);
         }
+
+        public function detailProfile($id)
+        {
+            $data['profile_detail'] = $this->mdaftarkost->getProfileById($id)->row();
+            $this->load->view('penyewa/profilePenyewa ', $data);
+        }
     }
 ?>

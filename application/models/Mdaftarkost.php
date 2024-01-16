@@ -13,17 +13,12 @@
 
 			if ( ! $this->upload->do_upload('gambar'))
 			{
-					// $error = array('error' => $this->upload->display_errors());
 					$this->session->set_flashdata('pesan',$this->upload->display_errors());
-
-					// $this->load->view('upload_form', $error);
 				}
 				else
 				{
-					// $data = array('upload_data' => $this->upload->data());
 					$gambar = $this->upload->data('file_name');
 					$this->session->set_flashdata('pesan',' Kami akan mengirimkan email berupa kode verifikasi ke email anda...');
-					// $this->load->view('upload_success', $data);
 				}
 				
 				
@@ -64,6 +59,32 @@
 			$this->db->where('id_kost', $id);
 			$query = $this->db->get('tbkost');
 			return $query->row(); // Mengembalikan satu baris hasil query
+		}
+
+		function tampildataprofile()
+		{
+			$sql="select * from tbuser";
+			$query=$this->db->query($sql);
+			if ($query->num_rows()>0)
+			{
+				foreach ($query->result() as $row)
+				{
+					$data[]=$row;
+				}	
+			}
+			else
+			{
+				$data="";	
+			}
+			
+			return $data;
+		}
+
+		function getProfileById($id)
+		{
+			$this->db->where('id_user', $id);
+			$query = $this->db->get('tbuser');
+			return $query; // Mengembalikan satu baris hasil query
 		}
     }
 ?>
