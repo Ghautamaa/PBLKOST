@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3"><?php echo $kost_detail->namaKost; ?></h4>
+                                <h4 class="fw-bold mb-3">Kost <?php echo $kost_detail->namaKost; ?></h4>
                                 <p class="mb-3"><?php echo $kost_detail->alamatKost; ?></p>
                                 <h5 class="fw-bold mb-3">Rp. <?php echo $kost_detail->hargaKost; ?> / Bulan</h5>
                                 
@@ -100,8 +100,31 @@
                                     }
                                     ?>
                                     </div>
-                                <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa  me-2 text-primary"></i> Hubungi Pemilik Kost</a>
+                                    <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary" data-bs-toggle="modal" data-bs-target="#hubungiModal">
+                                         <i class="fa me-2 text-primary"></i> Hubungi Pemilik Kost
+                                    </a>
                             </div>
+
+                            <!-- !-- Modal -->
+                            <div class="modal fade" id="hubungiModal" tabindex="-1" aria-labelledby="hubungiModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="hubungiModalLabel">Hubungi Pemilik Kost</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Nomor WhatsApp: <strong><?php echo $kost_detail->whatsapp_pemilik; ?></strong></p>
+                                            <p>Email: <strong><?php echo $kost_detail->email_pemilik; ?></strong></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Search End -->
+
                             <div class="col-lg-12">
                                 <nav>
                                     <div class="nav nav-tabs mb-3">
