@@ -26,10 +26,7 @@
             $tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('pemilik/cariKost', $tampildata);
 		}
-        function details_kost(){
-            $tampildata['data']=$this->mdaftarkost->tampildata();
-            $this->load->view('pemilik/detailKost', $tampildata);
-		}
+        
         
         function menu_admin(){
             $this->load->view('admin/menu_admin.php');
