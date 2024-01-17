@@ -55,7 +55,7 @@
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                           
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>

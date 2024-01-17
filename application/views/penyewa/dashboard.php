@@ -50,7 +50,7 @@
                             <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -58,6 +58,7 @@
         </div>
         <!-- Navbar End -->
 
+        <!-- content start -->
         <!-- Hero Start -->
         <div class="container-fluid py-1 mb-5 ">
             <div class="container py-5">
@@ -172,7 +173,7 @@
             </div>
         </div>
         <!-- Vesitable Shop End -->
-
+        <!-- content end -->
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div class="container py-5">
