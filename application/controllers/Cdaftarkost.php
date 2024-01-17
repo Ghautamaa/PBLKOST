@@ -19,6 +19,19 @@
             $this->load->view('pemilik/carikost', $data);
         }
 
+        function cari_kost_penyewa() {
+            $keyword = $this->input->post('keyword');
+            $data['data'] = $this->mdaftarkost->searchKost($keyword);
+            $this->load->view('penyewa/carikost', $data);
+        }
+
+        public function detailKost_penyewa($id)
+        {
+            $data['kost_detail'] = $this->mdaftarkost->getKostById($id);
+            $data['reviews'] = $this->mreviewkost->get_reviews_by_kost($id);
+            $this->load->view('penyewa/detailKost_penyewa', $data);
+        }
+
         public function detailKost($id)
         {
             $data['kost_detail'] = $this->mdaftarkost->getKostById($id);
