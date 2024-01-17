@@ -79,13 +79,7 @@
                                     <p class="m-0">@ikm.yogats@gmail.com</p>
                                     <a class="m-0" href="https://www.instagram.com/km.yoga/" ><i class="fab fa-instagram"></i> km.yoga</a>
                                     <p class="m-0">+6281236500166</p>                                  
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>                                    
+                                                                      
                                 </div>
                             </div>                           
                         </div>
@@ -102,13 +96,7 @@
                                     <p class="m-0">I_Putu_Agus_Sugiantara@gmail.com</p>
                                     <a class="m-0" href="https://www.instagram.com/gus_suggi/" ><i class="fab fa-instagram"></i> gus_suggi</a>
                                     <p class="m-0">081236100200</p>                                  
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>                                    
+                                                                       
                                 </div>
                             </div>                           
                         </div>
@@ -125,13 +113,7 @@
                                     <p class="m-0">Gusti_Ngurah_Senja_Ghautama@gmail.com</p>
                                     <a class="m-0" href="https://www.instagram.com/ghtma.a/" ><i class="fab fa-instagram"></i> ghtma</a>
                                     <p class="m-0">081236100300</p>                                  
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>                                    
+                                                                       
                                 </div>
                             </div>                           
                         </div>
@@ -148,13 +130,7 @@
                                     <p class="m-0">Louise_Juventus_Payong_Bali_Arakian@gmail.com</p>
                                     <a class="m-0" href="https://www.instagram.com/l_juventuss/" ><i class="fab fa-instagram"></i> l_juventuss</a>
                                     <p class="m-0">081236100400</p>                                  
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star text-info"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>                                    
+                                                                       
                                 </div>
                             </div>                           
                         </div>
