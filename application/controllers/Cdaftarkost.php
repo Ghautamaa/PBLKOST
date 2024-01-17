@@ -65,5 +65,6 @@
             $data['profile_detail'] = $this->mdaftarkost->getProfileById($id)->row();
             $this->load->view('penyewa/profilePenyewa ', $data);
         }
+
     }
 ?>
