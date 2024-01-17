@@ -57,7 +57,7 @@
           <input type="text" class="form-control" id="alamatKost" placeholder="Masukan Alamat Kost" name="alamatKost" required>
         </div>
         <div class="mb-3">
-          <label for="harga">Harga Kost :</label>
+          <label for="harga">Harga Kost/Bulan:</label>
           <input type="text" class="form-control" id="hargaKost" placeholder="Masukan Harga Kost" name="hargaKost" required>
         </div>
         <div class="mb-3">
