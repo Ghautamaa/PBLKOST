@@ -41,15 +41,15 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link text-info">Daftar Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
+                                <i class="fas fa-user fa-2x text-info"></i>
                             </a>
                             <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
@@ -152,7 +152,9 @@
                     ?>
                     <div class="border rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="<?=base_url()?>assets/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                        <div class="border rounded" style="width: 100%; height: 250px; overflow: hidden">
+                                <img src="<?=base_url('assets/uploadimg/').$item->gambar?>" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
                         </div>
                         <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $item->alamatKost ?></div>
                         <div class="p-4 rounded-bottom">

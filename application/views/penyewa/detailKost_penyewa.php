@@ -41,16 +41,16 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link active">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
-                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
+                            <a href="<?php echo base_url ('cprofile/tampilPenyewa'); ?>" class="my-auto">
+                                <i class="fas fa-user fa-2x text-info"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -65,10 +65,10 @@
                     <div class="col-lg-8 col-xl-9">
                         <div class="row g-4">
                             <div class="col-lg-6">
-                                <div class="border rounded">
-                                    <a href="#">
-                                        <img src="" class="img-fluid rounded" alt="Image">
-                                    </a>
+                                <div class="border rounded" style="width: 100%; height: 250px; overflow: hidden">
+                             
+                                    <img src="<?php echo base_url('assets/uploadimg/').$kost_detail->gambar;?>" class="img-fluid rounded" style="; " alt="Image">
+
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -99,8 +99,8 @@
                                     }
                                     ?>
                                     </div>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary" data-bs-toggle="modal" data-bs-target="#hubungiModal">
-                                         <i class="fa me-2 text-primary"></i> Hubungi Pemilik Kost
+                                    <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-info" data-bs-toggle="modal" data-bs-target="#hubungiModal">
+                                         <i class="fa me-2 text-info"></i> Hubungi Pemilik Kost
                                     </a>
                             </div>
 
@@ -113,8 +113,8 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Nomor WhatsApp: <strong><?php echo $kost_detail->whatsapp_pemilik; ?></strong></p>
-                                            <p>Email: <strong><?php echo $kost_detail->email_pemilik; ?></strong></p>
+                                            <p>Nomor WhatsApp: <strong><?php echo $kost_detail->nomor_whatsapp; ?></strong></p>
+                                            <p>Email: <strong><?php echo $kost_detail->alamat_email; ?></strong></p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -127,10 +127,10 @@
                             <div class="col-lg-12">
                                 <nav>
                                     <div class="nav nav-tabs mb-3">
-                                        <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
+                                        <button class="nav-link active border-white border-bottom-0 text-info" type="button" role="tab"
                                             id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
                                             aria-controls="nav-about" aria-selected="true">Deskripsi</button>
-                                        <button class="nav-link border-white border-bottom-0" type="button" role="tab"
+                                        <button class="nav-link border-white border-bottom-0 text-info" type="button" role="tab"
                                             id="nav-mission-tab" data-bs-toggle="tab" data-bs-target="#nav-mission"
                                             aria-controls="nav-mission" aria-selected="false">Reviews</button>
                                     </div>
@@ -178,7 +178,7 @@
                                                 <p class="mb-0 me-3">Beri rating pada kost</p>
                                                 <input type="number" name="rating" class="form-control" min="1" max="5" required placeholder="1-5">
                                             </div>
-                                            <button type="submit" class="btn border border-secondary text-primary rounded-pill px-4 py-3">Kirim</button>
+                                            <button type="submit" class="btn border border-secondary text-info rounded-pill px-4 py-3">Kirim</button>
                                         </div>
                                     </div>
                                 </div>

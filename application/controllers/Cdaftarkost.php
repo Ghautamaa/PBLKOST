@@ -41,6 +41,13 @@
             $this->load->view('pemilik/detailKost', $data);
         }
 
+        public function detailKost_admin($id)
+        {
+            $data['kost_detail'] = $this->mdaftarkost->getKostById($id);
+            $data['reviews'] = $this->mreviewkost->get_reviews_by_kost($id);
+            $this->load->view('admin/detailKost', $data);
+        }
+
         public function submitReview()
         {
             $id_kost = $this->input->post('id_kost');

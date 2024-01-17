@@ -41,16 +41,16 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link active">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilPenyewa'); ?>" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
+                                <i class="fas fa-user fa-2x text-info"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>

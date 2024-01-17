@@ -53,13 +53,11 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <!-- Logo Profile -->
-                          
                             <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
@@ -72,20 +70,16 @@
     <center><h3>Profil Kamu </h3></center>
     <hr>
     <br>
-
-    <div class="row text-center" style="width:100%">
-  
-    </div>
-        <div class="container">
-            <div class="col-md-7 rounded-5 mb-2 text-black px-5" style=" opacity: 1;">
-                <h4 class="fw-bold mb-3">Nama : <?php echo $data->nama_user; ?></h4>
-                <p class="mb-3">Whatsapp : <?php echo $data->nomor_whatsapp; ?></p>
-                <h5 class="fw-bold mb-3">Email : <?php echo $data->alamat_email; ?></h5>
-                <a  href="<?php echo base_url ('ctampilan/editprofile'); ?>" class="btn btn-sm btn-warning">Edit</a>
+        <div class="row text-center">
+            <div class="container">
+                <div>
+                    <h4 class="fw-bold mb-3"><?php echo $data->nama_user; ?></h4>
+                    <p class="mb-3">Whatsapp : <?php echo $data->nomor_whatsapp; ?></p>
+                    <h5 class="fw-bold mb-3">Email : <?php echo $data->alamat_email; ?></h5>
+                    <a  href="<?php echo base_url ('ctampilan/editprofilePenyewa'); ?>" class="btn btn-sm btn-warning">Edit Akun</a>
+                </div>
             </div>
         </div>
-    <!-- menampilkan data jika level 3(pemilik) -->
-    <h1><?= $data->image ?></h1>
   </div>
 <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

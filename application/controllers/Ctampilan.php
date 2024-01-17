@@ -7,7 +7,7 @@
             $this->load->model('mdaftarkost');
 
         }
-        
+        //dashboard
         function dashboard_penyewa() {
             $tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('penyewa/dashboard',$tampildata);
@@ -20,7 +20,7 @@
 			$tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('admin/dashboard', $tampildata);
         }
-
+        //kontak
         function kontak() {
             $this->load->view('pemilik/kontak');
         }
@@ -29,10 +29,12 @@
             $this->load->view('penyewa/kontak');
         }
 
-
+        //daftar
         function daftar_kost() {
             $this->load->view('pemilik/daftarKost');   
         }
+        
+        //cari
         function cari_kost(){
             $tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('pemilik/cariKost', $tampildata);
@@ -51,20 +53,41 @@
         function menu_admin(){
             $this->load->view('admin/menu_admin.php');
         }
-        // test func
-        function profile_penyewa(){
         
-            $this->load->view('pemilik/daftarKost');
+        //edit
+        function editprofilePemilik() {
+        $this->load->view('pemilik/editprofile');   
         }
-        
-        function editprofile() {
+
+        function editprofilePenyewa() {
         $this->load->view('penyewa/editprofile');   
+        }
+
+        function editprofileAdmin() {
+        $this->load->view('admin/editprofile');   
         }
 
         function tabelKost() {
         $tampildata['hasil']=$this->mdaftarkost->tampildata();
         $this->load->view('admin/tabel_kost',$tampildata);   
         }
+
+        function cetakpdf()
+        {
+            $data['hasil']=$this->mdaftarkost->tampildata();
+            require_once(APPPATH . 'libraries/dompdf/autoload.inc.php');
+			$pdf = new Dompdf\Dompdf();
+			$pdf->setPaper('A4', 'potrait');
+			$pdf->set_option('isRemoteEnabled', TRUE);
+			$pdf->set_option('isHtml5ParserEnabled', true);
+			$pdf->set_option('isPhpEnabled', true);
+			$pdf->set_option('isFontSubsettingEnabled', true);
+			
+			
+			$pdf->loadHtml($this->load->view('admin/cetakKost',$data, true));
+			$pdf->render();
+			$pdf->stream('Data Prodi', ['Attachment' => false]);	
+		}
 
     }
 

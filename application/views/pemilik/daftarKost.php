@@ -70,7 +70,7 @@
         </div>
         <div class="mb-3">
           <label for="harga">Harga Kost/Bulan:</label>
-          <input type="text" class="form-control" id="hargaKost" placeholder="Masukan Harga Kost" name="hargaKost" required>
+          <input type="number" class="form-control" id="hargaKost" placeholder="Masukan Harga Kost" name="hargaKost" required>
         </div>
         <div class="mb-3">
           <label for="Kodepos">Kode Pos :</label>

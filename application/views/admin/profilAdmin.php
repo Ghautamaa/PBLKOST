@@ -47,9 +47,9 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/menu_admin'); ?>" class="nav-item nav-link">Admin</a>
+                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/menu_admin'); ?>" class="nav-item nav-link text-info">Admin</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
@@ -62,26 +62,18 @@
         </div>
   <!-- akhir navbar -->
 
-  <div class="container bg-info">
-    <h3>Profil Kamu </h3>
-    <p>Selamat Datang di Menu Profil</p>
+  <div class="container">
+    <center><h3>Profil Kamu </h3></center>
     <hr>
     <br>
-
-
-    <div class="row text-center">
-  
-    </div>
-    <div>
-        <h4 class="fw-bold mb-3"><?php echo $data->nama_user; ?></h4>
-        <p class="mb-3"><?php echo $data->nomor_whatsapp; ?></p>
-        <h5 class="fw-bold mb-3"> <?php echo $data->alamat_email; ?></h5>
-        <a  href="<?php echo base_url ('ctampilan/editprofile'); ?>" class="btn btn-sm btn-warning">Edit</a>
-    </div>
-   
-    <!-- menampilkan data jika level 3(pemilik) -->
-    <h1><?= $data->image ?></h1>
-
+        <div class="row text-center">
+            <div>
+                <h4 class="fw-bold mb-3"><?php echo $data->nama_user; ?></h4>
+                <p class="mb-3">Nomor : <?php echo $data->nomor_whatsapp; ?></p>
+                <h5 class="fw-bold mb-3">Email : <?php echo $data->alamat_email; ?></h5>
+                <a  href="<?php echo base_url ('ctampilan/editprofileAdmin'); ?>" class="btn btn-sm btn-warning">Edit Akun</a>
+            </div>
+        </div>
   </div>
 <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

@@ -41,20 +41,20 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Master Data</a>
+                                <a href="#" class="nav-link dropdown-toggle text-info" data-bs-toggle="dropdown">Master Data</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a  href="<?php echo base_url('ctampilan/tampilDataAkun')?>" class="dropdown-item">Daftar Akun</a>
-                                    <a  href="<?php echo base_url('ctampilan/tabelKost')  ?>" class="dropdown-item">Daftar Kost</a>
+                                    <!-- <a  href="<?php echo base_url('ctampilan/tampilDataAkun')?>" class="dropdown-item">Daftar Akun</a> -->
+                                    <a  href="<?php echo base_url('ctampilan/tabelKost')  ?>" class="dropdown-item text-info">Daftar Kost</a>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilAdmin'); ?>" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
+                                <i class="fas fa-user fa-2x text-info"></i>
                             <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
@@ -126,20 +126,16 @@
 
 
   <script language="javascript">
-  	function hapusData(KodeProdi)
+  	function hapusData(id_kost)
 	{
 		if(confirm("Apakah yakin menghapus data ini?"))
 		{
-			window.open("<?php echo base_url(); ?>Cprodi/hapusData/"+KodeProdi,"_self");
+			window.open("<?php echo base_url(); ?>cprofile/deletekost/"+id_kost,"_self");
 		}	
-	}
-  function editData(KodeProdi)
-	{
-		load("Cprodi/editData/"+KodeProdi,"script");	
 	}
   function cetakpdf()
 	{
-		window.open("<?php echo base_url() ?>cprodi/cetakpdf","_blank");	
+		window.open("<?php echo base_url() ?>ctampilan/cetakpdf","_blank");	
 	}
   </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

@@ -44,16 +44,16 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cari_kost_penyewa'); ?>" class="nav-item nav-link active">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
-                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
+                            <a href="<?php echo base_url ('cprofile/tampilPenyewa'); ?>" class="my-auto">
+                                <i class="fas fa-user fa-2x text-info"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -85,7 +85,7 @@
                                 <div class="row g-4">
                                     <div class="col-lg-12">                           
                                         <!-- List Berapa banyak data pada sebuah lokasi kostnya -->
-                                        <div class="mb-3">
+                                        <div class="mt-3">
                                             <h4>Lokasi Kost</h4>
                                             <?php
                                             if (empty($data)) {
@@ -133,8 +133,8 @@
                                     ?>
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="<?=base_url()?>assets/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            <div class="border rounded" style="width: 100%; height: 250px; overflow: hidden">
+                                                <img src="<?=base_url('assets/uploadimg/').$item->gambar?>" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
                                             <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->alamatKost ?></div>
                                             <div class="p-4 border border-top-0 rounded-bottom">

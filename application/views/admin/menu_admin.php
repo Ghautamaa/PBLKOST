@@ -52,22 +52,22 @@
                             <span class="fa fa-bars text-info"></span>
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link">Cari Kost</a>
+                        <div class="navbar-nav mx-auto ">
+                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Master Data</a>
+                                <a href="#" class="nav-link dropdown-toggle text-info" data-bs-toggle="dropdown">Master Data</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a  href="<?php echo base_url('ctampilan/tampilDataAkun')?>" class="dropdown-item">Daftar Akun</a>
-                                    <a  href="<?php echo base_url('ctampilan/tabelKost')  ?>" class="dropdown-item">Daftar Kost</a>
+                                    <!-- <a  href="<?php echo base_url('ctampilan/tampilDataAkun')?>" class="dropdown-item">Daftar Akun</a> -->
+                                    <a  href="<?php echo base_url('ctampilan/tabelKost')  ?>" class="dropdown-item text-info">Daftar Kost</a>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilAdmin'); ?>" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                                <i class="fas fa-user fa-2x text-info"></i>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link ">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -76,8 +76,10 @@
   <!-- akhir navbar -->
 
   <div class="container">
-    <center><h3>Welcome Min </h3></center>
+    <center><h3>Welcome Admin</h3></center>
+    <center><h1>'<?php echo $this->session->userdata('nama_user')?>'</h1></center>
     <hr>
+
     <br>
 
     <div class="row text-center" style="width:100%">

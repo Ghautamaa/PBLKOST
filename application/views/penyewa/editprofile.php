@@ -8,11 +8,11 @@
     <h2>Edit Profile</h2>
     <div class="row">
         <div class="col-lg-8">
-            <form name="editprofile" action="<?php echo base_url ('cprofile/editprofile'); ?>" method="post">
+            <form name="editprofile" action="<?php echo base_url ('cprofile/editprofilePenyewa'); ?>" method="post">
                 <input type="hidden" name="id_user" value="<?php echo $this->session->userdata('id_user');?>">
                 <div class="mb-3 mt-4">
                     <label for="nama">Nama :</label>
-                    <input type="text" class="form-control" id="nama_user" placeholder="Ganti Nama" name="nama_user" required>
+                    <input type="text" class="form-control" id="nama_user" placeholder="Ganti Nama" name="nama_user" required><br><br>
                 </div>
                 <button type="submit" class="btn btn-success ">Submit</button> 
             </form>

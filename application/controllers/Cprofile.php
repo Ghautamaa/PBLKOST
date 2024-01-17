@@ -23,15 +23,22 @@ class Cprofile extends CI_Controller
         $tampildata['data'] = $this->mprofile->data();
         $this->load->view('admin/profilAdmin', $tampildata);
     }
-    function tampilprofile(){
-        $tampildata['data'] = $this->mprofile->data();
-        $this->load->view('penyewa/profilPenyewa', $tampildataprofile);
+
+    function editprofilePemilik() {
+        $this->mprofile->editprofilePemilik();
     }
 
-    function editprofile() {
-        $this->mprofile->editprofile();
+    function editprofilePenyewa() {
+        $this->mprofile->editprofilePenyewa();
     }
-    
+
+    function editprofileAdmin() {
+        $this->mprofile->editprofileAdmin();
+    }
+
+    function deletekost($id_kost) {
+        $this->mprofile->deletekost($id_kost);
+    }
 
 }
 ?>
