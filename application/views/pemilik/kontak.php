@@ -30,7 +30,7 @@
     </head>
 
     <body>
-        
+
         <!-- Navbar start -->      
         <div class="container-fluid sticky-top">           
             <div class="container px-0">
@@ -41,16 +41,17 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link">Daftar Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link active">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -58,122 +59,89 @@
         </div>
         <!-- Navbar End -->
 
-        <!-- content start -->
-        <!-- Hero Start -->
-        <div class="container-fluid py-1 mb-5 ">
+        <!-- Tastimonial Start -->
+        <div class="container-fluid testimonial py-5">
             <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 ">100% Aman Terpercaya</h4>
-                        <h1 class="mb-5 display-3">Kost Murah & Aman</h1>
-                    </div>
-                    <div class="col-md-12 col-lg-5">
-                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active rounded">
-                                    <img src="<?=base_url()?>assets/img/kos1.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                <div class="testimonial-header text-center">
+                    <h4 class="text-info">Kost Finder</h4>
+                    <h1 class="display-5 mb-5 text-dark">Kontak Kami!</h1>
+                </div>
+                
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>                         
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="<?=base_url()?>assets/img/avatar.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
-                                <div class="carousel-item rounded">
-                                    <img src="<?=base_url()?>assets/img/kos3.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">I Komang Yoga TriSaputra</h4>
+                                    <p class="m-0">@ikm.yogats@gmail.com</p>
+                                    <a class="m-0" href="https://www.instagram.com/km.yoga/" ><i class="fab fa-instagram"></i> km.yoga</a>
+                                    <p class="m-0">+6281236500166</p>                                  
+                                                                      
                                 </div>
-                            </div>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>                         
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="<?=base_url()?>assets/img/avatar.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">I Putu Agus Sugiantara</h4>
+                                    <p class="m-0">I_Putu_Agus_Sugiantara@gmail.com</p>
+                                    <a class="m-0" href="https://www.instagram.com/gus_suggi/" ><i class="fab fa-instagram"></i> gus_suggi</a>
+                                    <p class="m-0">081236100200</p>                                  
+                                                                       
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>                         
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="<?=base_url()?>assets/img/avatar.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">Gusti Ngurah Senja Ghautama</h4>
+                                    <p class="m-0">Gusti_Ngurah_Senja_Ghautama@gmail.com</p>
+                                    <a class="m-0" href="https://www.instagram.com/ghtma.a/" ><i class="fab fa-instagram"></i> ghtma</a>
+                                    <p class="m-0">081236100300</p>                                  
+                                                                      
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>                         
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="<?=base_url()?>assets/img/avatar.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">Louise Juventus Payong Bali Arakian</h4>
+                                    <p class="m-0">Louise_Juventus_Payong_Bali_Arakian@gmail.com</p>
+                                    <a class="m-0" href="https://www.instagram.com/l_juventuss/" ><i class="fab fa-instagram"></i> l_juventuss</a>
+                                    <p class="m-0">081236100400</p>                                  
+                                                                      
+                                </div>
+                            </div>                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
+        <!-- Tastimonial End -->
 
 
-        <!-- Featurs Section Start -->
-        <div class="container-fluid featurs py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-car-side fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Lokasi</h5>
-                                <p class="mb-0">Lokasi pilih sesukamu</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-user-shield fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>100% Aman</h5>
-                                <p class="mb-0">100% security aman</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Face To Face</h5>
-                                <p class="mb-0">info kontak </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fa fa-phone-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>24/7 Support</h5>
-                                <p class="mb-0">Support every time fast</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Featurs Section End -->
-
-        <!-- Vesitable Shop Start-->
-        <div class="container-fluid vesitable py-5">
-            <div class="container py-5">
-                <h1 class="mb-0">Kost Menarik yang mungkin kamu suka!</h1>
-                <div class="owl-carousel vegetable-carousel justify-content-center">
-                    <?php
-                        if (empty($data)) {
-                            echo "Data Kosong";	
-                        } else {
-                            $no = 1;
-                            foreach ($data as $item): 
-                    ?>
-                    <div class="border rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="<?=base_url()?>assets/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $item->alamatKost ?></div>
-                        <div class="p-4 rounded-bottom">
-                            <h4><?php echo $item->namaKost ?></h4>
-                            <p><?php echo $item->alamatKost ?></p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
-                                <a href="<?= base_url('Cdaftarkost/detailKost_penyewa/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-secondary"> Cek Kost</a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                            $no++;                                       
-                            endforeach;
-                        }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <!-- Vesitable Shop End -->
-        <!-- content end -->
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div class="container py-5">
@@ -181,7 +149,7 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Kost Finder</h1>
+                                <h1 class="text-info mb-0">Kost Finder</h1>
                                 <p class="text-secondary mb-0">100% Aman & Terpercaya</p>
                             </a>
                         </div>
@@ -230,7 +198,8 @@
                 </div>
             </div>
         </div>
-        <!-- Copyright End --> 
+        <!-- Copyright End -->
+
         
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
