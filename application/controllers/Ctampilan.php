@@ -20,6 +20,16 @@
 			$tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('admin/dashboard', $tampildata);
         }
+
+        function kontak() {
+            $this->load->view('pemilik/kontak');
+        }
+
+        function kontak_penyewa() {
+            $this->load->view('penyewa/kontak');
+        }
+
+
         function daftar_kost() {
             $this->load->view('pemilik/daftarKost');   
         }
@@ -32,6 +42,8 @@
             $tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('penyewa/cariKost_penyewa', $tampildata);
 		}
+
+        
         function menu_admin(){
             $this->load->view('admin/menu_admin.php');
         }

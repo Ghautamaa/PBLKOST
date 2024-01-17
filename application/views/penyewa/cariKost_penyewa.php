@@ -46,6 +46,7 @@
                         <div class="navbar-nav mx-auto">
                             <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost_penyewa'); ?>" class="nav-item nav-link active">Cari Kost</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
