@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jan 2024 pada 13.55
+-- Waktu pembuatan: 17 Jan 2024 pada 18.28
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -67,19 +67,21 @@ CREATE TABLE `tbkost` (
   `hargaKost` varchar(100) NOT NULL,
   `kodepos` varchar(10) NOT NULL,
   `deskripsi` text NOT NULL,
-  `gambar` text NOT NULL
+  `gambar` text NOT NULL,
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tbkost`
 --
 
-INSERT INTO `tbkost` (`id_kost`, `namaKost`, `alamatKost`, `hargaKost`, `kodepos`, `deskripsi`, `gambar`) VALUES
-(1, 'apa', 'dimana', '100000', '12345', 'apa aja ada', ''),
-(2, 'adad', 'ddada', '11111111', '12344', 'adsada', ''),
-(12, '12', '12', '12', '12', '12', 'Screenshot_(262)3.png'),
-(13, 'Aramugam', 'Jimbaran', '750000', '123456', 'Tidak ada fasilitas', 'Screenshot_(249).png'),
-(14, 'juventur', 'Bali', '1.000.000', '144555', 'kos murah aman dan percaya', 'Screenshot_2024-01-12_095110.png');
+INSERT INTO `tbkost` (`id_kost`, `namaKost`, `alamatKost`, `hargaKost`, `kodepos`, `deskripsi`, `gambar`, `id_user`) VALUES
+(18, 'tama', 'se', '700000', '123', '123', 'facebook_1670691992212_70073901057067067034.jpg', 81),
+(19, 'renra kost ', 'gunung agung', '700000', '123', '123123123', 'facebook_1670691992212_70073901057067067035.jpg', 81),
+(20, 'juven', 'se', '700000', '123123123', '123123123123', 'facebook_1670691992212_70073901057067067036.jpg', 81),
+(21, 'agus kost', 'buleleng', '700000', '123', '123', 'FjnKU7LXwAEC17Y.jpg', 81),
+(22, 'yoga', '123', 'se12', '123', '123', 'FjmcwdgaMAIcVSG.jpg', 81),
+(23, 'tamak', 'jimbaran', '1000000', 'qweqwe', '123', 'FjYLIsHUUAAHSi-.jpg', 81);
 
 -- --------------------------------------------------------
 
@@ -95,21 +97,6 @@ CREATE TABLE `tbreviewkost` (
   `comment` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `tbreviewkost`
---
-
-INSERT INTO `tbreviewkost` (`id_review`, `id_kost`, `id_user`, `rating`, `comment`, `created_at`) VALUES
-(1, 14, 79, 3, 'wkwkwkw', '2024-01-16 09:50:21'),
-(2, 14, 79, 1, 'ataaa', '2024-01-16 09:51:30'),
-(3, 14, 79, 5, 'bejir', '2024-01-16 09:51:42'),
-(4, 1, 79, 5, 'keren', '2024-01-16 10:30:46'),
-(5, 1, 79, 1, 'Jelek amat', '2024-01-16 10:30:55'),
-(6, 1, 79, 2, 'aowkwkw kepencet bang', '2024-01-16 10:31:07'),
-(7, 1, 79, 1, 'aaa', '2024-01-16 10:31:12'),
-(8, 1, 79, 5, '5555555555555', '2024-01-16 10:31:19'),
-(9, 13, 79, 1, 'dongo', '2024-01-16 12:47:04');
 
 -- --------------------------------------------------------
 
@@ -134,11 +121,12 @@ CREATE TABLE `tbuser` (
 --
 
 INSERT INTO `tbuser` (`id_user`, `nama_user`, `nomor_whatsapp`, `image`, `alamat_email`, `password`, `level`, `is_active`, `date_created`) VALUES
-(75, 'aura', '0895327714616', 'default.jpg', 'auranathania32@gmail.com', '$2y$10$JhAt4ZQIJTYa1/Vql9FUZeLGVtVA188IAAPnVn79q/JC27wjBWmSa', 2, 1, '2023-12-29'),
 (76, 'Juventus', '0812345678', 'default.jpg', 'arakianjuven@gmail.com', '$2y$10$zbgjVV34qiAd5uvsWrI.be7WiW3lhUsoxe8UrSJSe5GdK1Hp6AB7e', 3, 1, '2024-01-02'),
 (78, 'agus', '12212', 'default.jpg', 'arakianj@gmail.com', '$2y$10$V5IOzDbtQ.NbcQPMsaIQ7.QvsJ1gGdf0ThsMF4DU.hgyRjjMPUA1G', 3, 1, '2024-01-03'),
 (79, 'yogats', '081', 'default.jpg', 'ikm.yogats@gmail.com', '$2y$10$77fJTcAGWaRwmKEiUEPX/uzckEHbCH4hcwmQkqCWMrefbqZQ0Hbdm', 3, 1, '2024-01-16'),
-(80, 'adadaddada', '081', 'default.jpg', 'gamingicocoa@gmail.com', '$2y$10$qOinFTju19021/cxAkvNzOWzWQszlS1UXCDN/s71BkHHil38DRwVm', 2, 1, '2024-01-16');
+(80, 'adadaddada', '081', 'default.jpg', 'gamingicocoa@gmail.com', '$2y$10$qOinFTju19021/cxAkvNzOWzWQszlS1UXCDN/s71BkHHil38DRwVm', 2, 1, '2024-01-16'),
+(81, 'Tama', '0895327714616', 'default.jpg', 'senjaghautama2004@gmail.com', '$2y$10$V3Z0lonWbmCp9xaYlIMO/uz45d2BfUkqLgA3PgeBjX/.xCwbwbkRu', 3, 1, '2024-01-17'),
+(82, 'aura', '0895327714616', 'default.jpg', 'auranathania32@gmail.com', '$2y$10$5gtgHyGAU2agT3Mjl.ksnOlyBh84xPklMtjcarCN.gV.aoAK/UwIq', 2, 1, '2024-01-17');
 
 --
 -- Indexes for dumped tables
@@ -160,7 +148,8 @@ ALTER TABLE `role_id`
 -- Indeks untuk tabel `tbkost`
 --
 ALTER TABLE `tbkost`
-  ADD PRIMARY KEY (`id_kost`);
+  ADD PRIMARY KEY (`id_kost`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indeks untuk tabel `tbreviewkost`
@@ -184,7 +173,7 @@ ALTER TABLE `tbuser`
 -- AUTO_INCREMENT untuk tabel `id_token`
 --
 ALTER TABLE `id_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT untuk tabel `role_id`
@@ -196,23 +185,29 @@ ALTER TABLE `role_id`
 -- AUTO_INCREMENT untuk tabel `tbkost`
 --
 ALTER TABLE `tbkost`
-  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_kost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbreviewkost`
 --
 ALTER TABLE `tbreviewkost`
-  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbuser`
 --
 ALTER TABLE `tbuser`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `tbkost`
+--
+ALTER TABLE `tbkost`
+  ADD CONSTRAINT `tbkost_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tbuser` (`id_user`);
 
 --
 -- Ketidakleluasaan untuk tabel `tbreviewkost`
