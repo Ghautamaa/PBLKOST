@@ -44,6 +44,10 @@
             $data['table']= $this ->load->view('tabel_prodi',$tampildata,TRUE);
             $this->load->view('admin',$data);
         }
+        
+        function editprofile() {
+        $this->load->view('penyewa/editprofile');   
+        }
 
     }
 

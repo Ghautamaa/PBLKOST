@@ -22,8 +22,8 @@
 				}
 				
 				
-				$data['gambar']=  $gambar;
-				$this->db->insert ('tbkost',$data);
+			$data['gambar']=  $gambar;
+			$this->db->insert ('tbkost',$data);
             redirect ('Ctampilan/daftar_kost','refresh');
         } 
 
