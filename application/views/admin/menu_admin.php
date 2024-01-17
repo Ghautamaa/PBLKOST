@@ -1,63 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Daftar Kost</title>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css"> -->
+  
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <title>Kost Finder</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="<?=base_url()?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="<?=base_url()?>assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet">
+
+        <!-- <style>
+            
+            p.solid {border-styled: solid};
+            
+        </style> -->
 </head>
 
-<style>
-    body{
-        background-image: url(<?php echo base_url('')?>/img/daftarkos.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-</style>
-
-<body style="background-color: #E6F6F5;font-family: 'Montserrat', sans-serif; " >
-
-<div class="container-fluid px-0">
-
+<body>
+  <!-- awal navbar -->
+  <div class="container-fluid sticky-top">           
+            <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Kost Finder</h1></a>
-                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-primary"></span>
-                    </button>
+                    <a href="index.html" class="navbar-brand"><h1 class="text-info display-6">Kost Finder</h1></a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-info"></span>
+                        </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/menu_admin'); ?>" class="nav-item nav-link">Admin</a>
+                            <a href="<?php echo base_url ('ctampilan/admin'); ?>" class="nav-item nav-link active">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cariKost_admin'); ?>" class="nav-item nav-link">Cari Kost</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Master Data</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
                                     <a  href="<?php echo base_url('ctampilan/tampilDataAkun')?>" class="dropdown-item">Daftar Akun</a>
-                                    <a  href="<?php echo base_url('ctampilan/tampilDataKost')  ?>" class="dropdown-item">Daftar Kost</a>
+                                    <a  href="<?php echo base_url('ctampilan/tabelKost')  ?>" class="dropdown-item">Daftar Kost</a>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex m-3 me-0">
-
                             <!-- Logo Profile -->
-                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
+                            <a href="<?php echo base_url ('cprofile/tampilAdmin'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
-                            </a>
                             <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
             </div>
+        </div>
+  <!-- akhir navbar -->
+
+  <div class="container">
+    <center><h3>Welcome Min </h3></center>
+    <hr>
+    <br>
+
+    <div class="row text-center" style="width:100%">
+  
+    </div>
         
-            
-</div>
+  </div>
+<!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?=base_url()?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?=base_url()?>assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="<?=base_url()?>assets/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="<?=base_url()?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
-
+    <!-- Template Javascript -->
+    <script src="<?=base_url()?>assets/js/main.js"></script>
 </body>
+
 </html>

@@ -42,6 +42,10 @@
             $tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('penyewa/cariKost_penyewa', $tampildata);
 		}
+        function cariKost_admin(){
+            $tampildata['data']=$this->mdaftarkost->tampildata();
+            $this->load->view('admin/cariKostAdmin', $tampildata);
+		}
 
         
         function menu_admin(){
@@ -52,17 +56,14 @@
         
             $this->load->view('pemilik/daftarKost');
         }
-
-        // admin menu
-        function tampilDataKost(){
-            $tampildata['hasil']=$this->mprodi->tampilData();
-            $data['konten'] = $this->load->view('crud_prodi','',TRUE);
-            $data['table']= $this ->load->view('tabel_prodi',$tampildata,TRUE);
-            $this->load->view('admin',$data);
-        }
         
         function editprofile() {
         $this->load->view('penyewa/editprofile');   
+        }
+
+        function tabelKost() {
+        $tampildata['hasil']=$this->mdaftarkost->tampildata();
+        $this->load->view('admin/tabel_kost',$tampildata);   
         }
 
     }
