@@ -30,7 +30,10 @@
     </head>
 
     <body>
-        
+
+       
+
+
         <!-- Navbar start -->      
         <div class="container-fluid sticky-top">           
             <div class="container px-0">
@@ -41,9 +44,8 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active">Home</a>
-                            <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link">Cari Kost</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/cari_kost_penyewa'); ?>" class="nav-item nav-link active">Cari Kost</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
@@ -58,120 +60,120 @@
         </div>
         <!-- Navbar End -->
 
-        <!-- Hero Start -->
-        <div class="container-fluid py-1 mb-5 ">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 ">100% Aman Terpercaya</h4>
-                        <h1 class="mb-5 display-3">Kost Murah & Aman</h1>
-                    </div>
-                    <div class="col-md-12 col-lg-5">
-                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active rounded">
-                                    <img src="<?=base_url()?>assets/img/kos1.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                                </div>
-                                <div class="carousel-item rounded">
-                                    <img src="<?=base_url()?>assets/img/kos3.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero End -->
 
-
-        <!-- Featurs Section Start -->
-        <div class="container-fluid featurs py-5">
+        <!-- Fruits Shop Start-->
+        <div class="container-fluid fruite py-5">
             <div class="container py-5">
+                <h1 class="mb-4">Kost Finder</h1>
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-car-side fa-3x text-white"></i>
+                    <div class="col-lg-12">
+                        <div class="row g-4">
+                            <!-- Search Button -->
+                            <div class="col-xl-3">
+                                <form action="<?= base_url('Cdaftarkost/cari_kost'); ?>" method="post" class="w-100 mx-auto d-flex">
+                                    <input type="search" name="keyword" class="form-control p-3" placeholder="Masukan Nama/Lokasi Kost" aria-describedby="search-icon-1">
+                                    <!-- <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span> -->
+                                    <button type="submit" class="btn btn-info input-group-text p-3 "><i class="fa fa-search"></i></button>
+                                </form>
                             </div>
-                            <div class="featurs-content text-center">
-                                <h5>Lokasi</h5>
-                                <p class="mb-0">Lokasi pilih sesukamu</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-user-shield fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>100% Aman</h5>
-                                <p class="mb-0">100% security aman</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Face To Face</h5>
-                                <p class="mb-0">info kontak </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fa fa-phone-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>24/7 Support</h5>
-                                <p class="mb-0">Support every time fast</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Featurs Section End -->
+                            <!-- End Search Button -->
 
-        <!-- Vesitable Shop Start-->
-        <div class="container-fluid vesitable py-5">
-            <div class="container py-5">
-                <h1 class="mb-0">Kost Menarik yang mungkin kamu suka!</h1>
-                <div class="owl-carousel vegetable-carousel justify-content-center">
-                    <?php
-                        if (empty($data)) {
-                            echo "Data Kosong";	
-                        } else {
-                            $no = 1;
-                            foreach ($data as $item): 
-                    ?>
-                    <div class="border rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="<?=base_url()?>assets/img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
                         </div>
-                        <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $item->alamatKost ?></div>
-                        <div class="p-4 rounded-bottom">
-                            <h4><?php echo $item->namaKost ?></h4>
-                            <p><?php echo $item->alamatKost ?></p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
-                                <a href="<?= base_url('Cdaftarkost/detailKost_penyewa/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-secondary"> Cek Kost</a>
+                        <div class="row g-4">
+                            <div class="col-lg-3">
+                                <div class="row g-4">
+                                    <div class="col-lg-12">                           
+                                        <!-- List Berapa banyak data pada sebuah lokasi kostnya -->
+                                        <div class="mb-3">
+                                            <h4>Lokasi Kost</h4>
+                                            <?php
+                                            if (empty($data)) {
+                                                echo "Data Kosong";	
+                                            } else {
+                                                $lokasi = [];
+
+                                                // Mengelompokkan data berdasarkan alamatKost
+                                                foreach ($data as $item) {
+                                                    $lokasi[$item->alamatKost][] = $item;
+                                                }
+
+                                                // Menampilkan data yang sudah dikelompokkan
+                                                foreach ($lokasi as $alamatKost => $items):
+                                            ?>
+                                                <ul class="list-unstyled fruite-categorie">
+                                                    <li>
+                                                        <div class="d-flex justify-content-between fruite-name">
+                                                            <a ><?php echo $alamatKost; ?></a>
+                                                            <span>(<?php echo count($items); ?>)</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            <?php
+                                                endforeach;
+                                            }
+                                            ?>
+                                        <!-- End --> 
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Start List Kost -->
+                            <div class="col-lg-9">
+                                <div class="row g-4 justify-content-center">
+
+                                    <!-- Start perulangan kost -->
+                                    <?php
+                                        if (empty($data)) {
+                                            echo "Data Kosong";	
+                                        } else {
+                                            $no = 1;
+                                            foreach ($data as $item): 
+                                    ?>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="<?=base_url()?>assets/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->alamatKost ?></div>
+                                            <div class="p-4 border border-top-0 rounded-bottom">
+                                                    <h4>Kost <?php echo $item->namaKost ?></h4>
+                                                    <p><?php echo $item->alamatKost ?></p>
+                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
+                                                    <a href="<?= base_url('Cdaftarkost/detailKost_penyewa/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-secondary"><i class=" me-2 text-info"></i> Cek Kost!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <?php
+                                        $no++;                                       
+                                        endforeach;
+                                        }
+                                    ?>
+                                    <!-- End Card Kost -->
+
+                                    <!-- Start Hasil pencarian di sini -->
+                                    <?php if (!empty($data)): ?>
+                                        <div class="row g-4 justify-content-center">
+                                            <?php foreach ($data as $item): ?>
+                                                <!-- Tampilkan data hasil pencarian di sini -->
+                                            
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php else: ?>
+                                        <!-- Data kosong -->
+                                    <?php endif; ?>
+                                    <!-- End Hasil Pencarian Kost -->
+                                </div>
+                            </div>
+                            <!-- End List kost -->
+
                         </div>
                     </div>
-                    <?php
-                            $no++;                                       
-                            endforeach;
-                        }
-                    ?>
                 </div>
             </div>
         </div>
-        <!-- Vesitable Shop End -->
+        <!-- End-->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
