@@ -77,6 +77,7 @@
     <h4 class="fw-bold mb-3"><?php echo $data->nama_user; ?></h4>
     <p class="mb-3"><?php echo $data->nomor_whatsapp; ?></p>
     <h5 class="fw-bold mb-3"> <?php echo $data->alamat_email; ?></h5>
+    <a  href="<?php echo base_url ('ctampilan/editprofile'); ?>" class="btn btn-sm btn-warning">Edit</a>
     </div>
    
     <!-- menampilkan data jika level 3(pemilik) -->

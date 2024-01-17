@@ -23,14 +23,9 @@
 				}
 				
 				
-<<<<<<< HEAD
-			$data['gambar']=  $gambar;
-			$this->db->insert ('tbkost',$data);
-=======
 				$data['gambar']=  $gambar;
 				$this->db->insert ('tbkost',$data);
 				$this->session->set_flashdata('pesan','kost ada sudah terdaftar');
->>>>>>> 590fca7d5ceb91e2771bd88d511c7887f285705f
             redirect ('Ctampilan/daftar_kost','refresh');
         } 
 
