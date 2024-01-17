@@ -64,10 +64,10 @@
                 <input type="submit" value="Sign Up" class="btn btn-success" id="signup">
               </div>
               <!-- term & Privacy -->
-              <label class="pt-5" id="tp">
+              <!-- <label class="pt-5" id="tp">
                 <input type="checkbox">
                 I accept the <a href="#">Term of Use</a> & <a href="#">Privacy Policy</a>
-              </label>
+              </label> -->
             </div>
           </form>
         </div>

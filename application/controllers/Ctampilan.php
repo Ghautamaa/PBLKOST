@@ -9,7 +9,8 @@
         }
         
         function dashboard_penyewa() {
-            $this->load->view('penyewa/dashboard');
+            $tampildata['data']=$this->mdaftarkost->tampildata();
+            $this->load->view('penyewa/dashboard',$tampildata);
         }
         function dashboard_pemilik() {
 			$tampildata['data']=$this->mdaftarkost->tampildata();
@@ -19,6 +20,16 @@
 			$tampildata['data']=$this->mdaftarkost->tampildata();
             $this->load->view('admin/dashboard', $tampildata);
         }
+
+        function kontak() {
+            $this->load->view('pemilik/kontak');
+        }
+
+        function kontak_penyewa() {
+            $this->load->view('penyewa/kontak');
+        }
+
+
         function daftar_kost() {
             $this->load->view('pemilik/daftarKost');   
         }
@@ -27,6 +38,11 @@
             $this->load->view('pemilik/cariKost', $tampildata);
 		}
         
+        function cariKost_penyewa(){
+            $tampildata['data']=$this->mdaftarkost->tampildata();
+            $this->load->view('penyewa/cariKost_penyewa', $tampildata);
+		}
+
         
         function menu_admin(){
             $this->load->view('admin/menu_admin.php');
