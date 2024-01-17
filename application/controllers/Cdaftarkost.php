@@ -6,6 +6,8 @@
 			parent::__construct();
             $this->load->model('mdaftarkost');
             $this->load->model('mreviewkost');
+            $this->load->model('mvalidasi');
+            $this->mvalidasi->validasi();
             
 		}
         
