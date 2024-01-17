@@ -48,12 +48,24 @@
                 <?php
                     }
                 ?>    
-        <div class="mb-3 mt-4">
-          <label for="email">Nama Kost :</label>
-          <input type="text" class="form-control" id="namaKost" placeholder="Masukan Nama Kost" name="namaKost" required>
-        </div>
+          <div class="mb-3 mt-4">
+            <input type="hidden" name="id_user" value="<?php echo $this->session->userdata('id_user')?>">
+          </div>
+          <div class="mb-3 mt-4">
+            <label for="namaKost">Nama Kost :</label>
+            <input type="text" class="form-control" id="namaKost" placeholder="Masukan Nama Kost" name="namaKost" required>
+          </div>
+          <div class="mb-3 mt-4">
+            <label>Nomor Whatsapp :</label>
+            <p class="form-control"><?php echo $this->session->userdata('nomor_whatsapp')?></p>
+          </div>
+          <div class="mb-3 mt-4">
+            <label>Email :</label>
+            <p class="form-control"><?php echo $this->session->userdata('alamat_email')?></p>
+          </div>
+          
         <div class="mb-3">
-          <label for="alamat">Alamat Kost :</label>
+          <label for="alamatKost">Alamat Kost :</label>
           <input type="text" class="form-control" id="alamatKost" placeholder="Masukan Alamat Kost" name="alamatKost" required>
         </div>
         <div class="mb-3">

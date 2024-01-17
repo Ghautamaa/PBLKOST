@@ -15,15 +15,19 @@
             $password = $this->input->post('password');
 
             $querry= $this->db->get_where('tbuser', ['alamat_email'=>$alamat_email]);
-            
+            // memeriksa apakah query mengandung baris data.
             if($querry->num_rows()> 0){ 
+
                 $data=$querry->row_array();
                 if(password_verify($password, $data['password'])){
                     $session_data=array(
                         'id_user'=>$data['id_user'],
                         'nama_user'=>$data['nama_user'],
                         'level'=> $data['level'],
-                        'is_active'=> $data['is_active']
+                        'is_active'=> $data['is_active'],
+                        'nomor_whatsapp'=> $data['nomor_whatsapp'],
+                        'alamat_email'=> $data['alamat_email'],
+
                     );
                     if($data['is_active'] == 1){
                         $this->session->set_userdata($session_data); 
@@ -52,7 +56,6 @@
 		{
             $this->session->sess_destroy();
             return redirect('Auth/Clogin');
-            // $this->mlogin->logout();
 		}
 
         function Clogin() {
