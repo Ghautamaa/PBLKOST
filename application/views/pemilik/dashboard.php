@@ -48,10 +48,10 @@
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
-                            <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
+                            <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>

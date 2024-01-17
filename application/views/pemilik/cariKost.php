@@ -54,7 +54,7 @@
                             <a href="<?php echo base_url ('cprofile/tampil'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/clogin'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
