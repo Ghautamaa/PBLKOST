@@ -60,8 +60,10 @@
               </select>
               <!-- bagian button -->
               <div class="pt-3 d-flex align-items-center justify-content-between">
-				      <a class="btn btn-info" href="<?php echo base_url('Auth/clogin'); ?>">Back</a>
-                <input type="submit" value="Sign Up" class="btn btn-success" id="signup">
+                <div class="">
+                  <a class="btn btn-danger" href="<?php echo base_url('Auth/clogin'); ?>">Kembali</a>
+                </div>
+                <input type="submit" value="Daftar" class="btn btn-success" id="signup">
               </div>
               <!-- term & Privacy -->
               <!-- <label class="pt-5" id="tp">
