@@ -18,10 +18,16 @@ class Cprofile extends CI_Controller
     function tampilPemilik(){
         $tampildata['data'] = $this->mprofile->data();
         $this->load->view('pemilik/profilPemilik', $tampildata);
+
     }
     function tampilAdmin(){
         $tampildata['data'] = $this->mprofile->data();
         $this->load->view('admin/profilAdmin', $tampildata);
+    }
+    
+    function tampilKostUser(){
+        $tampildata['data'] = $this->mprofile->datakost();
+        $this->load->view('pemilik/tabel_kost', $tampildata);
     }
 
     function editprofilePemilik() {
@@ -36,8 +42,16 @@ class Cprofile extends CI_Controller
         $this->mprofile->editprofileAdmin();
     }
 
+    function editKost() {
+        $this->mprofile->editKost();
+    }
+
     function deletekost($id_kost) {
         $this->mprofile->deletekost($id_kost);
+    }
+
+    function deletekostUser($id_kost) {
+        $this->mprofile->deletekostUser($id_kost);
     }
 
 }

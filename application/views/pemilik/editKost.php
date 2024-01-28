@@ -3,50 +3,50 @@
   <!-- Learn More: https://formbold.com -->
   <div class="formbold-form-wrapper">
         <div class="formbold-mb-3">
-          <h2><center>Form Edit Profile</center></h2>
+          <h2><center>Form Edit Kost</center></h2>
         </div>
      <!-- <img src="your-image-here.jpg"> -->
     <form method="POST" action="<?php echo base_url ('cprofile/editKost'); ?>" enctype="multipart/form-data">
-        <input type="hidden" name="id_user" value="<?php echo $this->session->userdata('id_user');?>" >
+        <input type="hidden" name="id_kost" value="<?php echo $datakost->id_kost?>" >
       <div class="formbold-input-flex">
         <div>
-          <label class="formbold-form-label"> Nama Lengkap </label>
+          <label class="formbold-form-label"> Nama Kost </label>
           <input
             type="text"
-            name="nama_user"
-            id="nama_user"
-            placeholder="Nama yang Baru"
+            name="namaKost"
+            id="namaKost"
+            placeholder="Nama Kost yang Baru"
             class="formbold-form-input"
-            value="<?php echo $this->session->userdata('nama_user');?>"
+            value="<?php echo $datakost->namaKost?>"
           />
         </div>
 
         <div>
-          <label  class="formbold-form-label"> Whatsapp </label>
+          <label  class="formbold-form-label"> Kecamatan </label>
           <input
             type="text"
-            name="nomor_whatsapp"
-            id="nomor_whatsapp"
-            placeholder="Masukan No. Whatsapp"
+            name="kecamatan"
+            id="kecamatan"
+            placeholder="Masukan Kecamatan"
             class="formbold-form-input"
-            value="<?php echo $this->session->userdata('nomor_whatsapp');?>"
+            value="<?php echo $datakost->kecamatan?>"
           />
         </div>
       </div>
 
       <div class="formbold-mb-3">
-        <label for="address" class="formbold-form-label"> Email </label>
+        <label for="address" class="formbold-form-label"> Alamat Lengkap </label>
 
         <input
           type="text"
-          name="alamat_email"
-          id="alamat_email"
-          placeholder="Masukan Email baru"
+          name="alamatKost"
+          id="alamatKost"
+          placeholder="Alamat Lengkap"
           class="formbold-form-input formbold-mb-3"
-          value="<?php echo $this->session->userdata('alamat_email');?>"
+          value="<?php echo $datakost->alamatKost?>"
         />
 
-      <!-- <div class="formbold-input-flex">
+      <div class="formbold-input-flex">
         <div>
             <label class="formbold-form-label"> Kode Pos </label>
             <input
@@ -55,7 +55,7 @@
             id="kodepos"
             placeholder="Masukan Kodepos"
             class="formbold-form-input"
-            value=""
+            value="<?php echo $datakost->kodepos?>"
             />
         </div>
 
@@ -67,7 +67,7 @@
             id="hargaKost"
             placeholder="Masukan Harga Kost"
             class="formbold-form-input"
-            value=""
+            value="<?php echo $datakost->hargaKost?>"
             />
         </div>
       </div>
@@ -81,7 +81,7 @@
           name="deskripsi"
           id="deskripsi"
           class="formbold-form-input"
-        ></textarea>
+        ><?php echo $datakost->deskripsi?></textarea>
       </div>
 
       <div class="formbold-form-file-flex">
@@ -95,10 +95,10 @@
           class="formbold-form-file"
           value="<?php echo $datakost->gambar?>"
         />
-      </div> -->
+      </div>
 
       <button type="submit" class="formbold-btn">Ubah</button>
-      <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>"><button type="button" class="formbold-btn2">Kembali</button></a>
+      <a href="<?php echo base_url ('ctampilan/tabelKostedit'); ?>"><button type="button" class="formbold-btn2">Kembali</button></a>
     </form>
   </div>
 </div>
