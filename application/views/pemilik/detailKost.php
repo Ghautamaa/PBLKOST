@@ -60,7 +60,7 @@
         <!-- Navbar End -->
 
         <!-- Single Product Start -->
-        <div class="container-fluid py-5 mt-5">
+        <div class="container-fluid py-5 mt-1">
             <div class="container py-5">
                 <div class="row g-4 mb-5">
                     <div class="col-lg-8 col-xl-9">
@@ -183,15 +183,43 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form>                           
                         </div>
-                    </div>                   
-                </div>           
+                    </div>
+                        <!-- Start Promo Kost -->
+                        <!-- <div class="col-lg-4 col-xl-3">
+                            <div class="row g-4 fruite">
+                                <div class="col-lg-12">
+                                    <h4 class="mb-4">Kost yang mungkin kamu sukai!</h4>
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <div class="rounded" style="width: 100px; height: 100px;">
+                                            <img src="<?=base_url()?>assets/img/featur-1.jpg" class="img-fluid rounded" alt="Image">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-2">Kost <?= $kost_detail->namaKost ?></h6>
+                                            <div class="d-flex mb-2">
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="d-flex mb-2">
+                                                <h5 class="fw-bold me-2">2.99 $</h5>
+                                                <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                </div> 
+                            </div>
+                        </div>           -->
+                        <!-- End Promo Kost -->
+                </div>
             </div>
         </div>
-        <!-- Single Product End -->
-    
-
+        <!-- Detail Kost End -->
+            
+        
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-info-50 footer pt-5 mt-5">
             <div class="container py-5">

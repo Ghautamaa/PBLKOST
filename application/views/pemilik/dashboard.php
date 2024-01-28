@@ -64,7 +64,7 @@
             <div class="container py-1">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 ">100% Aman Terpercaya</h4>
+                        <h4 class="mb-2 ">100% Aman Terpercaya</h4>
                         <h1 class="mb-5 display-3">Kost Murah & Aman</h1>
                     </div>
                     <div class="col-md-12 col-lg-5">
@@ -156,7 +156,7 @@
                                 <img src="<?=base_url('assets/uploadimg/').$item->gambar?>" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                         </div>
-                        <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $item->alamatKost ?></div>
+                        <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $item->kecamatan ?></div>
                         <div class="p-4 rounded-bottom">
                             <h4><?php echo $item->namaKost ?></h4>
                             <p><?php echo $item->alamatKost ?></p>

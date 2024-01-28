@@ -51,8 +51,8 @@
 
 		function searchKost($keyword) {
 			$this->db->like('namaKost', $keyword);
-			$this->db->or_like('alamatKost', $keyword);
-			$this->db->or_like('deskripsi', $keyword);
+			$this->db->or_like('kecamatan', $keyword);
+			$this->db->or_like('hargaKost', $keyword);
 			$query = $this->db->get('tbkost');
 			return $query->result();
 		}

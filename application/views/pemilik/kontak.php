@@ -31,8 +31,9 @@
 
     <body>
 
+        
         <!-- Navbar start -->      
-        <<div class="container-fluid sticky-top">           
+        <div class="container-fluid sticky-top">           
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
                     <a href="index.html" class="navbar-brand"><h1 class="text-info display-6">Kost Finder</h1></a>
@@ -41,10 +42,10 @@
                         </button>                       
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
-                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active text-info">Home</a>
+                            <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link text-info">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link text-info">Daftar Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link active text-info" >Kontak kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
@@ -79,7 +80,7 @@
                                     <h4 class="text-dark">I Komang Yoga TriSaputra</h4>
                                     <p class="m-0">CS Kost Finder</p>                                  
                                     <p class="m-0">@ikm.yogats@gmail.com</p>
-                                    <a class="m-0" href="https://www.instagram.com/km.yoga/" ><i class="fab fa-instagram"></i> km.yoga</a>
+                                    <a class="m-0 text-dark" href="https://www.instagram.com/km.yoga/" ><i class="fab fa-instagram"></i> km.yoga</a>
                                                                       
                                 </div>
                             </div>                           
@@ -96,7 +97,7 @@
                                     <h4 class="text-dark">I Putu Agus Sugiantara</h4>
                                     <p class="m-0">CS Pemilik Kost</p>                                  
                                     <p class="m-0">I_Putu_Agus_Sugiantara@gmail.com</p>
-                                    <a class="m-0" href="https://www.instagram.com/gus_suggi/" ><i class="fab fa-instagram"></i> gus_suggi</a>
+                                    <a class="m-0 text-dark" href="https://www.instagram.com/gus_suggi/" ><i class="fab fa-instagram"></i> gus_suggi</a>
                                                                        
                                 </div>
                             </div>                           
@@ -113,7 +114,7 @@
                                     <h4 class="text-dark">Gusti Ngurah Senja Ghautama</h4>
                                     <p class="m-0">CS Penyewa Kost</p>                                  
                                     <p class="m-0">Gusti_Ngurah_Senja_Ghautama@gmail.com</p>
-                                    <a class="m-0" href="https://www.instagram.com/ghtma.a/" ><i class="fab fa-instagram"></i> ghtma</a>                                                                     
+                                    <a class="m-0 text-dark" href="https://www.instagram.com/ghtma.a/" ><i class="fab fa-instagram"></i> ghtma</a>                                                                     
                                 </div>
                             </div>                           
                         </div>
@@ -129,7 +130,7 @@
                                     <h4 class="text-dark">Louise Juventus Payong Bali Arakian</h4>
                                     <p class="m-0">CS Kost Finder</p>                                  
                                     <p class="m-0">Louise_Juventus_Payong_Bali_Arakian@gmail.com</p>
-                                    <a class="m-0" href="https://www.instagram.com/l_juventuss/" ><i class="fab fa-instagram"></i> l_juventuss</a>
+                                    <a class="m-0 text-dark" href="https://www.instagram.com/l_juventuss/" ><i class="fab fa-instagram"></i> l_juventuss</a>
                                                                       
                                 </div>
                             </div>                           
