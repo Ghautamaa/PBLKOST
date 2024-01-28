@@ -67,11 +67,24 @@
         $this->load->view('admin/editprofile');   
         }
 
+        function editKost($id) {
+        $tampildata['datakost']=$this->mdaftarkost->getKostByIdUser($id);
+        $this->load->view('pemilik/editkost',$tampildata);   
+        }
+
+        //menampilkan tabel data kost
         function tabelKost() {
         $tampildata['hasil']=$this->mdaftarkost->tampildata();
         $this->load->view('admin/tabel_kost',$tampildata);   
         }
 
+        function tabelKostedit() {
+        $Id=$this->session->userdata('id_user');
+        $tampildata['hasil']=$this->mdaftarkost->tampilkost($Id);
+        $this->load->view('pemilik/tabel_kost',$tampildata);   
+        }
+
+        //cetakpdf
         function cetakpdf()
         {
             $data['hasil']=$this->mdaftarkost->tampildata();

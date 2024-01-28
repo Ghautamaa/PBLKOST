@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <!-- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css"> -->
-  
-  <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <title>Kost Finder</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
@@ -34,11 +27,21 @@
 
         <!-- Template Stylesheet -->
         <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <!-- awal navbar -->
-  <div class="container-fluid sticky-top">           
+    </head>
+    <body>
+      <style>
+        .formbold-alert {
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #4287f5;
+            color: white;
+            border-radius: 5px;
+        }
+      </style>
+      
+    <div class="container-fluid">
+               <!-- Navbar start -->      
+               <div class="container-fluid sticky-top">           
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
                     <a href="index.html" class="navbar-brand"><h1 class="text-info display-6">Kost Finder</h1></a>
@@ -50,34 +53,105 @@
                             <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active text-info">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link text-info">Daftar Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Kontak kami</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Contact kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
-                          
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link text-info">LOG OUT</a>
+                            <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>" class="my-auto">
+                                <i class="fas fa-user fa-2x text-info"></i>
+                            </a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
-  <!-- akhir navbar -->
-
-  <div class="container">
-    <center><h3>Profil Kamu </h3></center>
-    <hr>
-    <br>
-        <div class="row text-center">
-            <div>
-                <h4 class="fw-bold mb-3"><?php echo $data->nama_user; ?></h4>
-                <p class="mb-3">Nomor : <?php echo $data->nomor_whatsapp; ?></p>
-                <h5 class="fw-bold mb-3">Email : <?php echo $data->alamat_email; ?></h5>
-                <a  href="<?php echo base_url ('ctampilan/editprofilePemilik'); ?>" class="btn btn-sm btn-warning">Edit Akun</a>
-                <a  href="<?php echo base_url ('ctampilan/tabelKostedit'); ?>" class="btn btn-sm btn-warning">Edit Kost</a>
-            </div>
-        </div>
+        <!-- Navbar End -->
+  <div class="container table col-11">
+    <div class="my-2 d-flex justify-content-center align-items-center">
+    <h3 class="">Daftar Data Kost</h3>
     </div>
-<!-- JavaScript Libraries -->
+              <?php
+                    $pesan=$this->session->flashdata('pesan');
+                    if ($pesan=="")
+                    {
+                        echo "";	
+                    }
+                    else
+                    {
+                ?>
+                  <div class="formbold-alert">
+                    <?php echo $pesan; ?>                        
+                  </div>
+              <?php
+                    }
+                ?> 
+    <table class="table table-hover table-striped-columns text-center">
+    <div class=" d-flex justify-content-center align-items-center">
+
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Kost</th>
+        <th>Kecamatan</th>
+        <th>Alamat</th>
+        <th>Harga</th>
+        <th>Kode Pos</th>
+        <th>Deskripsi</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php
+		if(empty($hasil))
+		{
+			echo "Data kosong";
+		}
+		else
+		{
+			$no=1;
+			foreach ($hasil as $data):
+	?>	
+    
+      <tr>
+        <td><?php echo $no; ?></td>
+        <td><?php echo $data->namaKost;  ?></td>
+        <td><?php echo $data->kecamatan;  ?></td>
+        <td><?php echo $data->alamatKost; ?></td>
+        <td><?php echo $data->hargaKost; ?></td>
+        <td><?php echo $data->kodepos; ?></td>
+        <td><?php echo $data->deskripsi; ?></td>
+        <td>
+          <a  href="<?php echo base_url ('ctampilan/editKost/'.$data->id_kost); ?>" class="btn btn-sm btn-warning">Edit Kost</a>
+        	<button type="button" onclick="hapusData('<?php echo $data->id_kost; ?>');" class="btn btn-sm btn-danger" >Hapus</button>
+        </td>
+      </tr>
+      
+     <?php
+	 		$no++;
+	 		endforeach;
+		}
+	 ?>
+      
+    </tbody>
+    </div>
+
+  </table>
+  </div>
+
+  </div>
+
+
+  <script language="javascript">
+  	function hapusData(id_kost)
+	{
+		if(confirm("Apakah yakin menghapus data ini?"))
+		{
+			window.open("<?php echo base_url(); ?>cprofile/deletekostUser/"+id_kost,"_self");
+		}	
+	}
+
+  </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?=base_url()?>assets/lib/easing/easing.min.js"></script>
@@ -88,5 +162,4 @@
     <!-- Template Javascript -->
     <script src="<?=base_url()?>assets/js/main.js"></script>
 </body>
-
 </html>

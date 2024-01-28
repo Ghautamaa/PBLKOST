@@ -19,19 +19,18 @@
 			}
 			else
 			{
-					// $this->session->set_flashdata('pesan',$this->upload->display_errors());
-				}
+					
+			}
 				
 				
-				$data['gambar']=  $gambar;
-				$this->db->insert ('tbkost',$data);
-				$this->session->set_flashdata('pesan','kost ada sudah terdaftar');
+			$data['gambar']=  $gambar;
+			$this->db->insert ('tbkost',$data);
+			$this->session->set_flashdata('pesan','Kost anda sudah terdaftar');
             redirect ('Ctampilan/daftar_kost','refresh');
         } 
 
         function tampildata()
 		{
-			
 			
 			$sql="select * from tbkost";
 			$query=$this->db->query($sql);
@@ -68,6 +67,17 @@
 			return $query->row(); // Mengembalikan satu baris hasil query
 		}
 
+		//untuk nampilin data kos user
+		function getKostByIdUser($id)
+		{
+			$this->db->select('*');
+			$this->db->from('tbkost');
+			$this->db->where('id_kost', $id);
+			$query = $this->db->get();
+			return $query->row(); // Mengembalikan satu baris hasil query
+		}
+
+		//untuk menampilkan data pengguna di halaman akun/profile
 		function tampildataprofile()
 		{
 			$sql="select * from tbuser";
@@ -94,6 +104,17 @@
 			return $query; // Mengembalikan satu baris hasil query
 		}
 
+<<<<<<< HEAD
+=======
+		function tampilkost($id) 
+		{
+			$this->db->where('id_user', $id);
+			$query = $this->db->get('tbkost');
+			return $query->result();
+		}
+
+
+>>>>>>> cd76a39b841fc9e90984d191e96c4317760fb77a
 		
     }
 ?>
