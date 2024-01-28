@@ -31,9 +31,6 @@
 
     <body>
 
-       
-
-
         <!-- Navbar start -->      
         <div class="container-fluid sticky-top">           
             <div class="container px-0">
@@ -98,16 +95,16 @@
 
                                                 // Mengelompokkan data berdasarkan alamatKost
                                                 foreach ($data as $item) {
-                                                    $lokasi[$item->alamatKost][] = $item;
+                                                    $lokasi[$item->kecamatan][] = $item;
                                                 }
 
                                                 // Menampilkan data yang sudah dikelompokkan
-                                                foreach ($lokasi as $alamatKost => $items):
+                                                foreach ($lokasi as $kecamatan => $items):
                                             ?>
                                                 <ul class="list-unstyled fruite-categorie">
                                                     <li>
                                                         <div class="d-flex justify-content-between fruite-name">
-                                                            <a ><?php echo $alamatKost; ?></a>
+                                                            <a ><?php echo $kecamatan; ?></a>
                                                             <span>(<?php echo count($items); ?>)</span>
                                                         </div>
                                                     </li>
@@ -139,11 +136,11 @@
                                             <div class="border rounded" style="width: 100%; height: 250px; overflow: hidden">
                                                 <img src="<?=base_url('assets/uploadimg/').$item->gambar?>" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->alamatKost ?></div>
+                                            <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?php echo $item->kecamatan ?></div>
                                             <div class="p-4 border border-top-0 rounded-bottom">
                                                     <h4>Kost <?php echo $item->namaKost ?></h4>
                                                     <p><?php echo $item->alamatKost ?></p>
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-0"><?php echo "Rp.".number_format("$item->hargaKost",2,",",".") ?>/ Bulan</p>
                                                     <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-info"><i class=" me-2 text-info"></i> Cek Kost!</a>
                                             </div>
                                         </div>

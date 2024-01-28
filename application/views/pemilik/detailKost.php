@@ -60,7 +60,7 @@
         <!-- Navbar End -->
 
         <!-- Single Product Start -->
-        <div class="container-fluid py-5 mt-5">
+        <div class="container-fluid py-5 mt-1">
             <div class="container py-5">
                 <div class="row g-4 mb-5">
                     <div class="col-lg-8 col-xl-9">
@@ -73,9 +73,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3">Kost <?php echo $kost_detail->namaKost; ?></h4>
-                                <p class="mb-3"><?php echo $kost_detail->alamatKost; ?></p>
-                                <h5 class="fw-bold mb-3">Rp. <?php echo $kost_detail->hargaKost; ?> / Bulan</h5>
+                                <h4 class="text-bold fs-9 mb-3">Kost <?php echo $kost_detail->namaKost; ?></h4>
+                                <p class="text-dark fs-9 mb-3"><?php echo $kost_detail->alamatKost; ?></p>
+                                <h5 class="text-dark fs-9 fw-bold mb-3"><?php echo "Rp.".number_format("$kost_detail->hargaKost",2,",",".") ?>/ Bulan</h5>
                                 
                                 <?php
                                     // Mendapatkan total rating

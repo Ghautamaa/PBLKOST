@@ -104,8 +104,6 @@
 			return $query; // Mengembalikan satu baris hasil query
 		}
 
-<<<<<<< HEAD
-=======
 		function tampilkost($id) 
 		{
 			$this->db->where('id_user', $id);
@@ -114,7 +112,6 @@
 		}
 
 
->>>>>>> cd76a39b841fc9e90984d191e96c4317760fb77a
 		
     }
 ?>
