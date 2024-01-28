@@ -21,7 +21,7 @@
       <div class="col-6   d-flex align-items-center justify-content-start">
       <div class="hero text-light mx-5">
               <h1 >KostFinder</h1>
-              <h2 >cari tempat terbaik kalian</h2>
+              <h5>Hunian Nyaman di Ujung Jari, Temukan Kost Impianmu Sekarang</h5>
             </div>
       </div>
 
