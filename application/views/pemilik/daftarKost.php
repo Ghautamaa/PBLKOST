@@ -46,7 +46,7 @@
           />
         </div>
 
-        <div>
+        <!-- <div>
           <label  class="formbold-form-label" > Kecamatan </label>
           <input
             type="text"
@@ -56,12 +56,74 @@
             class="formbold-form-input"
             required
           />
+        </div> -->
+        <div>
+            <label class="formbold-form-label">Kecamatan</label>
+            <select class="formbold-form-input" name="kecamatan" id="kecamatan" required>
+            <option value="" disabled selected>--Pilih Kecamatan--</option>
+            <option value="Abiansemal">Abiansemal</option>
+            <option value="Kuta">Kuta</option>
+            <option value="Kuta Selatan">Kuta Selatan</option>
+            <option value="Kuta Utara">Kuta Utara</option>
+            <option value="Mengwi">Mengwi</option>
+            <option value="Petang">Petang</option>
+            <option value="Bangli">Bangli</option>
+            <option value="Kintamani">Kintamani</option>
+            <option value="Susut">Susut</option>
+            <option value="Tembuku">Tembuku</option>
+            <option value="Banjar">Banjar</option>
+            <option value="Buleleng">Buleleng</option>
+            <option value="Busung Biu">Busung Biu</option>
+            <option value="Gerokgak">Gerokgak</option>
+            <option value="Kubutambahan">Kubutambahan</option>
+            <option value="Sawan">Sawan</option>
+            <option value="Seririt">Seririt</option>
+            <option value="Sukasada">Sukasada</option>
+            <option value="Tejakula">Tejakula</option>
+            <option value="Blahbatuh">Blahbatuh</option>
+            <option value="Gianyar">Gianyar</option>
+            <option value="Payangan">Payangan</option>
+            <option value="Sukawati">Sukawati</option>
+            <option value="Tampaksiring">Tampaksiring</option>
+            <option value="Tegallalang">Tegallalang</option>
+            <option value="Ubud">Ubud</option>
+            <option value="Jembrana">Jembrana</option>
+            <option value="Melaya">Melaya</option>
+            <option value="Mendoyo">Mendoyo</option>
+            <option value="Negara">Negara</option>
+            <option value="Pekutatan">Pekutatan</option>
+            <option value="Abang">Abang</option>
+            <option value="Bebandem">Bebandem</option>
+            <option value="Karangasem">Karangasem</option>
+            <option value="Kubu">Kubu</option>
+            <option value="Manggis">Manggis</option>
+            <option value="Rendang">Rendang</option>
+            <option value="Selat">Selat</option>
+            <option value="Sidemen">Sidemen</option>
+            <option value="Banjarangkan">Banjarangkan</option>
+            <option value="Dawan">Dawan</option>
+            <option value="Klungkung">Klungkung</option>
+            <option value="Nusa Penida">Nusa Penida</option>
+            <option value="Baturiti">Baturiti</option>
+            <option value="Kediri">Kediri</option>
+            <option value="Kerambitan">Kerambitan</option>
+            <option value="Marga">Marga</option>
+            <option value="Penebel">Penebel</option>
+            <option value="Pupuan">Pupuan</option>
+            <option value="Selemadeg">Selemadeg</option>
+            <option value="Selemadeg Barat">Selemadeg Barat</option>
+            <option value="Selemadeg Timur">Selemadeg Timur</option>
+            <option value="Tabanan">Tabanan</option>
+            <option value="Denpasar Barat">Denpasar Barat</option>
+            <option value="Denpasar Selatan">Denpasar Selatan</option>
+            <option value="Denpasar Timur">Denpasar Timur</option>
+            <option value="Denpasar Utara">Denpasar Utara</option>
+            </select>
         </div>
       </div>
 
       <div class="formbold-mb-3">
         <label for="address" class="formbold-form-label" > Alamat Lengkap </label>
-
         <input
           type="text"
           name="alamatKost"

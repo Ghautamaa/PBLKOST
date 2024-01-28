@@ -34,17 +34,17 @@
         </div>
       </div>
 
-      <div class="formbold-mb-3">
-        <label for="address" class="formbold-form-label"> Email </label>
+      <!-- <div class="formbold-mb-3">
+        <label for="address" class="formbold-form-label"> Email </label> -->
 
-        <input
+        <!-- <input
           type="text"
           name="alamat_email"
           id="alamat_email"
           placeholder="Masukan Email baru"
           class="formbold-form-input formbold-mb-3"
-          value="<?php echo $this->session->userdata('alamat_email');?>"
-        />
+          value=""
+        /> -->
 
       <!-- <div class="formbold-input-flex">
         <div>
@@ -93,7 +93,7 @@
           name="gambar"
           id="gambar"
           class="formbold-form-file"
-          value="<?php echo $datakost->gambar?>"
+          value=""
         />
       </div> -->
 
