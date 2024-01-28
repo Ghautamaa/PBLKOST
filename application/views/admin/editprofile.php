@@ -98,7 +98,7 @@
       </div> -->
 
       <button type="submit" class="formbold-btn">Ubah</button>
-      <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>"><button type="button" class="formbold-btn2">Kembali</button></a>
+      <a href="<?php echo base_url ('cprofile/tampilAdmin'); ?>"><button type="button" class="formbold-btn2">Kembali</button></a>
     </form>
   </div>
 </div>

@@ -73,9 +73,15 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
+<<<<<<< HEAD
                                 <h4 class="text-bold fs-9 mb-3">Kost <?php echo $kost_detail->namaKost; ?></h4>
                                 <p class="text-dark fs-9 mb-3"><?php echo $kost_detail->alamatKost; ?></p>
                                 <h5 class="text-dark fs-9 fw-bold mb-3"><?php echo "Rp.".number_format("$kost_detail->hargaKost",2,",",".") ?>/ Bulan</h5>
+=======
+                                <h4 class="fw-bold mb-3">Kost <?php echo $kost_detail->namaKost; ?></h4>
+                                <p class="mb-3"><?php echo $kost_detail->alamatKost; ?></p>
+                                <h5 class="fw-bold mb-3"><?php echo "Rp. " . number_format("$kost_detail->hargaKost", 2, ",", ".");  ?> / Bulan</h5>
+>>>>>>> 1d793c92f1e69f5aedb4739cd015269b3b39d664
                                 
                                 <?php
                                     // Mendapatkan total rating

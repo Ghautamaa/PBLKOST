@@ -98,7 +98,7 @@
       </div> -->
 
       <button type="submit" class="formbold-btn">Ubah</button>
-      <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>"><button type="button" class="formbold-btn2">Kembali</button></a>
+      <a href="<?php echo base_url ('cprofile/tampilPenyewa'); ?>"><button type="button" class="formbold-btn2">Kembali</button></a>
     </form>
   </div>
 </div>
@@ -115,6 +115,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    
   }
   .formbold-mb-3 {
     margin-bottom: 20px;
