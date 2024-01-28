@@ -47,14 +47,14 @@
                             <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link text-info">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link active text-info">Cari Kost</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link text-info">Daftar Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Kontak kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilPemilik'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x text-info"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link text-info">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -67,12 +67,11 @@
 
 
         <!-- Fruits Shop Start-->
-        <div class="container-fluid fruite py-5">
-            <div class="container py-5">
-                <h1 class="mb-4">Kost Finder</h1>
+        <div class="container-fluid fruite py-1">
+            <div class="container py-5">                
                 <div class="row g-4">
                     <div class="col-lg-12">
-                        <div class="row g-4">
+                        <div class="row g-9">
                             <!-- Search Button -->
                             <div class="col-xl-3">
                                 <form action="<?= base_url('Cdaftarkost/cari_kost'); ?>" method="post" class="w-100 mx-auto d-flex">
@@ -145,7 +144,7 @@
                                                     <h4>Kost <?php echo $item->namaKost ?></h4>
                                                     <p><?php echo $item->alamatKost ?></p>
                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
-                                                    <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-secondary"><i class=" me-2 text-info"></i> Cek Kost!</a>
+                                                    <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border border-secondary rounded-pill px-3 text-info"><i class=" me-2 text-info"></i> Cek Kost!</a>
                                             </div>
                                         </div>
                                     </div>
@@ -182,62 +181,31 @@
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container-fluid bg-dark text-info-50 footer pt-5 mt-5">
             <div class="container py-5">
-                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                <div class="pb-1 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.5) ;">
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Kost Finder</h1>
-                                <p class="text-secondary mb-0">100% Aman & Terpercaya</p>
+                                <h1 class="text-light mb-0">Kost Finder</h1>
+                                <p class="text-light mb-0">100% Aman & Terpercaya</p>
                             </a>
                         </div>
                         
-                        <div class="col-lg-3">
+                        <div class="col-lg-9">
                             <div class="d-flex justify-content-end pt-3">
-                                <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.instagram.com/gus_suggi/"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.instagram.com/ghtma.a/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="https://www.instagram.com/l_juventuss/"><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href="https://www.instagram.com/km.yoga/"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn  btn-outline-light me-2 btn-md-square rounded-circle" href="https://www.instagram.com/gus_suggi/"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light me-2 btn-md-square rounded-circle" href="https://www.instagram.com/ghtma.a/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light me-2 btn-md-square rounded-circle" href="https://www.instagram.com/l_juventuss/"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-light btn-md-square rounded-circle" href="https://www.instagram.com/km.yoga/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-light mb-3">Kenapa kamu harus menggunakan Kost Finder?</h4>
-                            <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea explicabo perferendis eligendi officiis mollitia.</p>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-light mb-3">Contact</h4>
-                            <p>Address: 1429 Netus Rd, NY 48247</p>
-                            <p>Email: Example@gmail.com</p>
-                            <p>Phone: +0123 4567 8910</p>
-                            <p>Payment Accepted</p>
-                            <img src="img/payment.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <!-- Footer End -->
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Kost Finder</a>, All right reserved.</span>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End --> 
         
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

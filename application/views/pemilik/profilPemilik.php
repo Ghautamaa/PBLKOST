@@ -50,12 +50,12 @@
                             <a href="<?php echo base_url ('ctampilan/dashboard_pemilik'); ?>" class="nav-item nav-link active text-info">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cari_kost'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
                             <a href="<?php echo base_url ('ctampilan/daftar_kost'); ?>" class="nav-item nav-link text-info">Daftar Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak'); ?>" class="nav-item nav-link text-info">Kontak kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                           
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link text-info">LOG OUT</a>
                         </div>
                     </div>
                 </nav>

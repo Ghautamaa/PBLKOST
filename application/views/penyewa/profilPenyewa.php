@@ -55,10 +55,10 @@
                         <div class="navbar-nav mx-auto">
                             <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active text-info">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Kontak kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link text-info">LOG OUT</a>
                         </div>
                     </div>
                 </nav>

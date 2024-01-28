@@ -43,14 +43,14 @@
                         <div class="navbar-nav mx-auto">
                             <a href="<?php echo base_url ('ctampilan/dashboard_penyewa'); ?>" class="nav-item nav-link active text-info">Home</a>
                             <a href="<?php echo base_url ('ctampilan/cariKost_penyewa'); ?>" class="nav-item nav-link text-info">Cari Kost</a>
-                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Contact kami</a>
+                            <a href="<?php echo base_url ('ctampilan/kontak_penyewa'); ?>" class="nav-item nav-link text-info">Kontak kami</a>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilPenyewa'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x text-info"></i>
                             </a>
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link text-info">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -64,8 +64,8 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 ">100% Aman Terpercaya</h4>
                         <h1 class="mb-5 display-3">Kost Murah & Aman</h1>
+                        <h4 class="mb-3 ">100% Aman Terpercaya</h4>
                     </div>
                     <div class="col-md-12 col-lg-5">
                         <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
@@ -208,7 +208,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
-                            <h4 class="text-light mb-3">Contact</h4>
+                            <h4 class="text-light mb-3">Kontak</h4>
                             <p>Address: 1429 Netus Rd, NY 48247</p>
                             <p>Email: Example@gmail.com</p>
                             <p>Phone: +0123 4567 8910</p>
