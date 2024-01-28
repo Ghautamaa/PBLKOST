@@ -21,11 +21,11 @@
       <tr>
       <th>No</th>
         <th>Nama Kost</th>
+        <th>Kecamatan</th>
         <th>Alamat</th>
         <th>Harga</th>
         <th>Kode Pos</th>
         <th>Deskripsi</th>
-        <th>Gambar</th>
       </tr>
     </thead>
     <tbody>
@@ -43,11 +43,11 @@
       <tr>
       <td><?php echo $no; ?></td>
         <td><?php echo $data->namaKost;  ?></td>
+        <td><?php echo $data->kecamatan;  ?></td>
         <td><?php echo $data->alamatKost; ?></td>
         <td><?php echo $data->hargaKost; ?></td>
         <td><?php echo $data->kodepos; ?></td>
         <td><?php echo $data->deskripsi; ?></td>
-        <td><img src="<?php echo base_url('assets/uploadimg/').$data->gambar; ?>" alt="" width="100px" height="100px" style="overflow: hidden;"></td>
       </tr>
       
      <?php
