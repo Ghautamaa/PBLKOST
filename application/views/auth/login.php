@@ -23,7 +23,7 @@
           <div class="col-6 d-flex align-items-center justify-content-start" >
             <div class=" mx-5 hero text-light">
               <h1 >KostFinder</h1>
-              <h2 >cari tempat terbaik kalian</h2>
+              <h5 >Hunian Nyaman di Ujung Jari, Temukan Kost Impianmu Sekarang</h5>
             </div>
           </div>
           <div class="h-100 col-6 d-flex justify-content-center align-items-center pt-5">
@@ -53,7 +53,7 @@
                   <!-- bagian button -->
                   <div class="pt-3 align-items-center justify-content-between align d-flex">
                     <a href="<?php echo base_url('Auth/register');?>">Klik Untuk Daftar</a>
-                    <input type="submit" value="Masuk" class="btn btn-success" id="login">
+                    <input type="submit" value="Masuk " class="btn btn-success" id="login">
                   </div>
                 </div>
               </form>

@@ -147,7 +147,7 @@
                         if (empty($data)) {
                             echo "Data Kosong";	
                         } else {
-                            $no = 1;
+                            
                             foreach ($data as $item): 
                     ?>
                     <div class="border rounded position-relative vesitable-item">
@@ -161,13 +161,13 @@
                             <h4><?php echo $item->namaKost ?></h4>
                             <p><?php echo $item->alamatKost ?></p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp.<?php echo $item->hargaKost ?>/Bulan</p>
+                                <p class="text-dark fs-5 fw-bold mb-0"><?php echo "Rp. " . number_format("$item->hargaKost", 2, ",", ".");  ?>/Bulan</p>
                                 <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border-secondary rounded-pill px-3 text-info"> Cek Kost</a>
                             </div>
                         </div>
                     </div>
                     <?php
-                            $no++;                                       
+                            // $no++;                                       
                             endforeach;
                         }
                     ?>

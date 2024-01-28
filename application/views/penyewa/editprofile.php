@@ -115,6 +115,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    
   }
   .formbold-mb-3 {
     margin-bottom: 20px;
