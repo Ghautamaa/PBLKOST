@@ -178,7 +178,7 @@
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-info-50 footer pt-5 mt-5">
+        <div class="container-fluid bg-dark text-info-50 footer pt-5 mt-5 ">
             <div class="container py-5">
                 <div class="pb-1 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.5) ;">
                     <div class="row g-4">

@@ -161,11 +161,7 @@
                             <h4><?php echo $item->namaKost ?></h4>
                             <p><?php echo $item->alamatKost ?></p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
-<<<<<<< HEAD
-                                <p class="text-dark fs-5 fw-bold mb-0"><?php echo "Rp.".number_format("$item->hargaKost",2,",",".") ?>/Bulan</p>
-=======
                                 <p class="text-dark fs-5 fw-bold mb-0"><?php echo "Rp. " . number_format("$item->hargaKost", 2, ",", ".");  ?>/Bulan</p>
->>>>>>> 1d793c92f1e69f5aedb4739cd015269b3b39d664
                                 <a href="<?= base_url('Cdaftarkost/detailKost/' . $item->id_kost); ?>" class="btn border-secondary rounded-pill px-3 text-info"> Cek Kost</a>
                             </div>
                         </div>
