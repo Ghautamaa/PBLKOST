@@ -93,5 +93,7 @@
 			$query = $this->db->get('tbuser');
 			return $query; // Mengembalikan satu baris hasil query
 		}
+
+		
     }
 ?>
