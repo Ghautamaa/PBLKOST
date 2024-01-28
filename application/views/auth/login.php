@@ -53,7 +53,7 @@
                   <!-- bagian button -->
                   <div class="pt-3 align-items-center justify-content-between align d-flex">
                     <a href="<?php echo base_url('Auth/register');?>">Klik Untuk Daftar</a>
-                    <input type="submit" value="Login" class="btn btn-success" id="login">
+                    <input type="submit" value="Masuk" class="btn btn-success" id="login">
                   </div>
                 </div>
               </form>
