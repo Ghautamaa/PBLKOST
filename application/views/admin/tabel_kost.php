@@ -55,7 +55,7 @@
                             <!-- Logo Profile -->
                             <a href="<?php echo base_url ('cprofile/tampilAdmin'); ?>" class="my-auto">
                                 <i class="fas fa-user fa-2x text-info"></i>
-                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link">LOG OUT</a>
+                            <a href="<?php echo base_url ('auth/logout'); ?>" class="nav-item nav-link text-info">LOG OUT</a>
                         </div>
                     </div>
                 </nav>
@@ -73,11 +73,11 @@
       <tr>
         <th>No</th>
         <th>Nama Kost</th>
+        <th>Kecamatan</th>
         <th>Alamat</th>
         <th>Harga</th>
         <th>Kode Pos</th>
         <th>Deskripsi</th>
-        <th>Gambar</th>
         <th>Aksi</th>
       </tr>
     </thead>
@@ -96,13 +96,13 @@
       <tr>
         <td><?php echo $no; ?></td>
         <td><?php echo $data->namaKost;  ?></td>
+        <td><?php echo $data->kecamatan;  ?></td>
         <td><?php echo $data->alamatKost; ?></td>
         <td><?php echo $data->hargaKost; ?></td>
         <td><?php echo $data->kodepos; ?></td>
         <td><?php echo $data->deskripsi; ?></td>
-        <td><img src="<?php echo base_url('assets/uploadimg/').$data->gambar; ?>" alt="" width="100px" height="100px" style="overflow: hidden;"></td>
         <td>
-        	<button type="button" onclick="hapusData('<?php echo $data->id_kost; ?>');" class="btn btn-sm btn-danger mt-4" >Hapus</button>
+        	<button type="button" onclick="hapusData('<?php echo $data->id_kost; ?>');" class="btn btn-sm btn-danger" >Hapus</button>
         </td>
       </tr>
       
@@ -118,7 +118,7 @@
   </table>
   <br>
   <div class="pb-5">
-    <input type="button" class="btn btn-success" value="Cetak Data" onclick="cetakpdf()">
+    <input type="button" class="btn btn-info" value="Cetak Data" onclick="cetakpdf()">
   </div>
   </div>
 
