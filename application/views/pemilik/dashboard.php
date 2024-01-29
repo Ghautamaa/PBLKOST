@@ -64,8 +64,8 @@
             <div class="container py-1">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-2 ">100% Aman Terpercaya</h4>
-                        <h1 class="mb-5 display-3">Kost Murah & Aman</h1>
+                        <h1 class="mb-2 display-3">Kost Murah & Nyaman</h1>
+                        <h4 class="mb-5 ">Hunian Nyaman di Ujung Jari, Temukan Kost Impianmu Sekarang</h4>
                     </div>
                     <div class="col-md-12 col-lg-5">
                         <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
@@ -106,8 +106,8 @@
                                 <i class="fas fa-user-shield fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>Keamanan Sepenuhnya</h5>
-                                <p class="mb-0">Jaminan keamanan 100% terjamin.</p>
+                                <h5>Data Pengguna Terjamin</h5>
+                                <p class="mb-0">Kami menjaga keamanan data pengguna</p>
                             </div>
                         </div>
                     </div>
@@ -117,8 +117,8 @@
                                 <i class="fas fa-exchange-alt fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>Langsung Bertemu Pemilik</h5>
-                                <p class="mb-0">Kontak eksklusif pemilik untuk pertemuan tatap muka</p>
+                                <h5>Face To Face</h5>
+                                <p class="mb-0">Dapatkan info kontak dan Hubungi langsung pemilik kost</p>
                             </div>
                         </div>
                     </div>
@@ -128,8 +128,8 @@
                                 <i class="fa fa-phone-alt fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>Kontak Kami 24/7</h5>
-                                <p class="mb-0">Hubungi kami kapan saja, setiap hari, untuk layanan tanpa henti</p>
+                                <h5>Dukungan 24/7</h5>
+                                <p class="mb-0">Dapatkan bantuan dengan cepat kapan pun Anda butuhkan</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                     <div class="border rounded position-relative vesitable-item">
                         <div class="vesitable-img">
                         <div class="border rounded" style="width: 100%; height: 250px; overflow: hidden">
-                                <img src="<?=base_url('assets/uploadimg/').$item->gambar?>" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="<?=base_url('assets/uploadimg/').$item->gambar?>" class="img-fluid w-100 h-100 rounded-top" alt="">
                             </div>
                         </div>
                         <div class="text-white bg-info px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $item->kecamatan ?></div>

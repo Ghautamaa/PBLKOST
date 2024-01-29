@@ -67,7 +67,7 @@
                             <div class="col-lg-6">
                                 <div class="border rounded" style="width: 100%; height: 250px; overflow: hidden">
                              
-                                    <img src="<?php echo base_url('assets/uploadimg/').$kost_detail->gambar;?>" class="img-fluid rounded" style="; " alt="Image">
+                                    <img src="<?php echo base_url('assets/uploadimg/').$kost_detail->gambar;?>" class="img-fluid rounded w-100" alt="Image">
 
                                 </div>
                             </div>
