@@ -6,7 +6,7 @@
           <h2><center>Form Edit Profile</center></h2>
         </div>
      <!-- <img src="your-image-here.jpg"> -->
-    <form method="POST" action="<?php echo base_url ('cprofile/editKost'); ?>" enctype="multipart/form-data">
+    <form method="POST" action="<?php echo base_url ('cprofile/editprofilePenyewa'); ?>" enctype="multipart/form-data">
         <input type="hidden" name="id_user" value="<?php echo $this->session->userdata('id_user');?>" >
       <div class="formbold-input-flex">
         <div>
